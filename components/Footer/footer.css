@@ -1,0 +1,8 @@
+.color-link{
+  color: #ff8dc1;
+  
+}
+.color-link:hover{
+  font-weight: bolder;
+  color: #c95589;
+}
