@@ -35,14 +35,14 @@ const Footer = () => {
             </div>
           </div>
           <div className='col-lg-3 col-md-6 col-5 mt-3 align-items-center d-flex justify-content-center'>
-            <Image src={logo} alt='My Queens Club' height='150' width='200' quality={100} />
+            <Image src={logo} alt='My Queens Club' height={150} width={200} quality={100} />
           </div>
         </div>
         <div className='container'>
           <h3 className='text-center m-4 text-white'>Redes Sociales</h3>
           <div className='d-flex justify-content-center'>
-            <a href="https://www.facebook.com/myqueensclub" target='_blank' rel='noreferrer' className='me-3'><Image src={facebook} alt='Facebook' height='40' width='40' quality={100} /></a>
-            <a href="https://www.instagram.com/myqueensclub/?hl=es" target='_blank' rel='noreferrer' className='ms-3'><Image src={instagram} alt='Instagram' height='40' width='40' quality={100} /></a>
+            <a href="https://www.facebook.com/myqueensclub" target='_blank' rel='noreferrer' className='me-3'><Image src={facebook} alt='Facebook' height={40} width={40} quality={100} /></a>
+            <a href="https://www.instagram.com/myqueensclub/?hl=es" target='_blank' rel='noreferrer' className='ms-3'><Image src={instagram} alt='Instagram' height={40} width={40} quality={100} /></a>
           </div>
         </div>
         <div className='row m-4'>
