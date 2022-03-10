@@ -1,0 +1,9 @@
+.bgNav {
+  background-color: black;
+}
+.colorLink{
+  color: #ff8dc1 !important;
+}
+.colorLink:hover{
+  color: #c95589 !important;
+}
