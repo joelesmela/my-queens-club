@@ -1,6 +1,7 @@
-import '../styles/globals.css';
 import * as NextImage from "next/image";
+import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -10,6 +11,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'fullscreen',
 }
 
 const OriginalNextImage = NextImage.default;
