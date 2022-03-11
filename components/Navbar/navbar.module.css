@@ -7,3 +7,16 @@
 .colorLink:hover{
   color: #c95589 !important;
 }
+.buttonStyle {
+  background: none;
+  border: 0;
+  color: #fff;
+  font: inherit;
+  font-size: 100%;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+.buttonStyle:hover {
+  color: #fff;
+}
