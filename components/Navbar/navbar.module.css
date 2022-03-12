@@ -2,21 +2,32 @@
   background-color: black;
 }
 .colorLink{
-  color: #ff8dc1 !important;
+  color: #edc871 !important;
 }
 .colorLink:hover{
-  color: #c95589 !important;
+  color: #cdab58 !important;
 }
 .buttonStyle {
   background: none;
-  border: 0;
-  color: #fff;
+  border-style: none;
+  color: #edc871 !important;
   font: inherit;
   font-size: 100%;
   line-height: normal;
   overflow: visible;
-  padding: 0;
+  padding-top: 11px;
 }
 .buttonStyle:hover {
-  color: #fff;
+  color: #cdab58 !important;
+}
+.buttonStyleGet{
+  color: #fff !important;
+  background-color: #edc871;
+  font-size: 15px;
+  border: 2px solid #cdab58;
+  padding: 5px 12px;
+}
+.buttonStyleGet:hover {
+  background-color: #cdab58;
+  border: 2px solid #edc871;
 }

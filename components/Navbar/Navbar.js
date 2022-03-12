@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link'
 import styles from'./navbar.module.css';
 
 const Navbar = () => {
@@ -13,66 +14,33 @@ const Navbar = () => {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarCollapse">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Home</a>
+              <Link href='/'><a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Updates</a></Link>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink}`} href="#">Features</a>
+              <Link href='/'><a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Galleries</a></Link>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink}`} href="#">Pricing</a>
+              <Link href='/'><a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Films</a></Link>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink}`} href="#">Disabled</a>
+              <Link href='/'><a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Queens</a></Link>
             </li>
-            <li>
-              <button type="button" className={`d-sm-block d-lg-none ${styles.buttonStyle}`}>Ingresar</button>
+            <li className="nav-item">
+              <Link href='/'><a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Join the Club</a></Link>
+            </li>
+            <li className="nav-item">
+              <button type="button" className={`nav-link ${styles.buttonStyleGet}`}>Get started</button>
+            </li>
+            <li className="nav-item">
+              <button type="button" className={`nav-link ${styles.buttonStyle}`}>Sing In</button>
             </li>
           </ul>
         </div>
-        <div>
-          <button type="button" className={`d-none d-lg-block ${styles.buttonStyle}`}>Ingresar</button>
-        </div>
       </div>
     </nav>
-    // <nav className={`navbar navbar-expand-lg navbar-dark ${styles.bgNav}`}>
-    //   <div className="container-fluid px-5">
-        
-    //       <a className="navbar-brand" href="#">
-    //         <Image className="w-25 d-inline-block" width={100} height={70} src='/images/logo.png' alt='logo'/>
-    //       </a>
-        
-    //     <div>
-    //       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    //         <span className="navbar-toggler-icon"></span>
-    //       </button>
-    //       <div className="collapse navbar-collapse" id="navbarNav">
-    //         <ul className="navbar-nav">
-    //           <li className="nav-item">
-    //             <a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Home</a>
-    //           </li>
-    //           <li className="nav-item">
-    //             <a className={`nav-link ${styles.colorLink}`} href="#">Features</a>
-    //           </li>
-    //           <li className="nav-item">
-    //             <a className={`nav-link ${styles.colorLink}`} href="#">Pricing</a>
-    //           </li>
-    //           <li className="nav-item">
-    //             <a className={`nav-link ${styles.colorLink}`} href="#">Disabled</a>
-    //           </li>
-    //           <li>
-    //             <button type="button" className={`d-sm-block d-lg-none ${styles.buttonStyle}`}>Ingresar</button>
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //     <div>
-    //       <button type="button" className={`d-none d-lg-block ${styles.buttonStyle}`}>Ingresar</button>
-    //     </div>
-    //   </div>
-    // </nav>
   );
 };
 
