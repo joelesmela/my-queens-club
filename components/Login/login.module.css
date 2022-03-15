@@ -1,0 +1,31 @@
+.icon{
+  color: #fe8ba1;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: #e5b9c0;
+}
+.placeholder{
+  background-color: #282828;
+  border-radius: 5px;
+  border-color: #cccccc;
+}
+.placeholder:focus, .placeholder:active{
+  background-color: #282828;
+  border-radius: 5px;
+  border-color: #cccccc;
+  box-shadow: none;
+}
+.button{
+  background-color: #b766a0;
+  border-radius: 5px;
+  border-color: #994c6e;
+}
+.button:hover{
+  background-color: #724c7d;
+  border-radius: 5px;
+  border-color: #994c6e;
+}
+.password{
+  text-decoration: none;
+  cursor: pointer;
+}
