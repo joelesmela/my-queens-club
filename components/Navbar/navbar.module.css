@@ -1,0 +1,34 @@
+.bgNav {
+  background-color: black;
+}
+.colorLink{
+  color: #edc871;
+}
+.colorLink:hover{
+  color: #cdab58;
+}
+.buttonStyle {
+  background: none;
+  border-style: none;
+  color: #edc871;
+  font: inherit;
+  font-size: 100%;
+  line-height: normal;
+  overflow: visible;
+  padding-top: 11px;
+}
+.buttonStyle:hover {
+  color: #cdab58;
+}
+.buttonStyleGet{
+  color: #fff;
+  background-color: #edc871;
+  font-size: 15px;
+  border: 2px solid #cdab58;
+  padding: 5px 12px;
+}
+.buttonStyleGet:hover {
+  color: #fff;
+  background-color: #cdab58;
+  border: 2px solid #edc871;
+}
