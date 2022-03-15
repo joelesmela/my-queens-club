@@ -1,0 +1,39 @@
+.button{
+  background-color: #cdab58;
+  border-radius: 5px;
+  border-color: #edc871;
+}
+.button:hover{
+  background-color: #b89640;
+  border-radius: 5px;
+  border-color: #edc871;
+}
+.placeholder{
+  background-color: #282828;
+  border-radius: 5px;
+  border-color: #cccccc;
+}
+.placeholder:focus, .placeholder:active{
+  background-color: #282828;
+  border-radius: 5px;
+  border-color: #cccccc;
+  box-shadow: none;
+}
+.text{
+  text-align: justify;
+  font-size: 14px;
+}
+.condition{
+  color: white;
+}
+.condition:hover{
+  color: #edc871;
+}
+.icon{
+  color: white;
+  font-size: 30px;
+  align-items: center;
+}
+.icon:hover{
+  color: #cdab58;
+}
