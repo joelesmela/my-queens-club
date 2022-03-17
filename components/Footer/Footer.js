@@ -17,7 +17,7 @@ const Footer = () => {
               <form>
                 <div className="input-group">
                   <input type="email" className={`form-control text-white ${styles.placeholder}`} placeholder="Email" aria-label="Email" required />
-                  <button type="submit" className={`input-group-text ${styles.button}`}>Suscríbete</button>
+                  <button type="submit" className={`input-group-text text-white ${styles.button}`}>Suscríbete</button>
                 </div>
               </form>
             </div>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         <div className='row m-4'>
           <p className='col-lg-6 col-md-12 text-center text-white'>My Queens Club - Todos los derechos reservados © 2022</p>
-          <p className='col-lg-6 col-md-12 text-center text-white'>Sitio web realizado por <a href="#" className={`text-decoration-none ${styles.condition}`}>Lager Devs</a></p>
+          <p className='col-lg-6 col-md-12 text-center text-white'>Sitio web realizado por <a href="https://www.lagerdevs.com/" className={`text-decoration-none ${styles.condition}`}>Lager Devs</a></p>
         </div>
       </div>
     </div>

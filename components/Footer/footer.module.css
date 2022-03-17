@@ -1,12 +1,12 @@
 .button{
-  background-color: #cdab58;
+  background-color: var(--primary-color);
   border-radius: 5px;
-  border-color: #edc871;
+  border-color: var(--primary-color);
 }
 .button:hover{
-  background-color: #b89640;
+  background-color: var(--secondary-color);
   border-radius: 5px;
-  border-color: #edc871;
+  border-color: var(--secondary-color);
 }
 .placeholder{
   background-color: #282828;
@@ -27,7 +27,7 @@
   color: white;
 }
 .condition:hover{
-  color: #edc871;
+  color: var(--primary-color);
 }
 .icon{
   color: white;
@@ -35,5 +35,5 @@
   align-items: center;
 }
 .icon:hover{
-  color: #cdab58;
+  color: var(--primary-color);
 }
