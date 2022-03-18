@@ -1,0 +1,39 @@
+.button{
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  border-color: var(--primary-color);
+}
+.button:hover{
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border-color: var(--secondary-color);
+}
+.placeholder{
+  background-color: #282828;
+  border-radius: 5px;
+  border-color: #cccccc;
+}
+.placeholder:focus, .placeholder:active{
+  background-color: #282828;
+  border-radius: 5px;
+  border-color: #cccccc;
+  box-shadow: none;
+}
+.text{
+  text-align: justify;
+  font-size: 14px;
+}
+.condition{
+  color: white;
+}
+.condition:hover{
+  color: var(--primary-color);
+}
+.icon{
+  color: white;
+  font-size: 30px;
+  align-items: center;
+}
+.icon:hover{
+  color: var(--primary-color);
+}
