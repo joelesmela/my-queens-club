@@ -1,0 +1,14 @@
+.cardGallery{
+  background-color: #171717;
+}
+
+.titleName{
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1;
+}
+
+.imageQuantity{
+  display: flex;
+  font-size: 13.2px;
+  align-items: center;
+}
