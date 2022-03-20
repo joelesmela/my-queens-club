@@ -1,5 +1,5 @@
 .cardHome{
-  min-height: 100vh;
+  height: 75vh;
   background-size: cover;
   background-position: center;
 	transform: scale(0.99);
@@ -20,5 +20,5 @@
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 15px;
   border: 2px solid white;
-  padding: 12px 24px;
+  padding: 8px 18px;
 }

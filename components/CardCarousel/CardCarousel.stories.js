@@ -1,13 +1,25 @@
 import React from 'react';
 import CardCarousel from './CardCarousel';
-import carouselInfo from './carouselData.example.json';
+import carouselGalleryInfo from './carouselGalleryData.example.json';
+import carouselQueenInfo from './carouselQueenData.example.json';
 
-const Component = {
+export default {
   title: 'Card Carousel',
   component: CardCarousel,
 };
 
-const Template = () => <CardCarousel carouselInfo={carouselInfo} />;
+const Template = (args) => <CardCarousel {...args} />;
 
-export const Default = Template.bind({});
-export default Component;
+export const GalleryCard = {
+  args: {
+    carouselInfo: carouselGalleryInfo,
+    gallery: 4
+  },
+};
+
+export const QueenCard = {
+  args: {
+    carouselInfo: carouselQueenInfo,
+    queen: 5
+  },
+};

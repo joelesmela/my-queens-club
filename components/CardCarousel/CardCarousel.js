@@ -5,9 +5,10 @@ import CardGallery from '../CardGallery/CardGallery';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import CardHome from '../CardHome/CardHome';
 
 
-const CardCarousel = ({ carouselInfo }) => {
+const CardCarousel = ({ carouselInfo, gallery, queen }) => {
   return (
     <Swiper
       slidesPerView={1}
@@ -20,7 +21,7 @@ const CardCarousel = ({ carouselInfo }) => {
           slidesPerView: 3,
         },
         1024: {
-          slidesPerView: 4,
+          slidesPerView: `${ queen || gallery }`,
         },
       }}
       navigation={true}
@@ -30,7 +31,8 @@ const CardCarousel = ({ carouselInfo }) => {
       {
         carouselInfo.map((info, index) => (
           <SwiperSlide key={index}>
-            <CardGallery {...info} />
+            { gallery && <CardGallery {...info} /> }
+            { queen && <CardHome {...info} /> }
           </SwiperSlide>
         ))
       }
