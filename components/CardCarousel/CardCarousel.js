@@ -21,7 +21,7 @@ const CardCarousel = ({ carouselInfo, gallery, queen }) => {
           slidesPerView: 3,
         },
         1024: {
-          slidesPerView: `${ queen || gallery }`,
+          slidesPerView: queen || gallery,
         },
       }}
       navigation={true}
@@ -42,6 +42,8 @@ const CardCarousel = ({ carouselInfo, gallery, queen }) => {
 
 CardCarousel.propTypes = {
   carouselInfo: PropTypes.array.isRequired,
+  gallery: PropTypes.number,
+  queen: PropTypes.number
 };
 
 export default CardCarousel;
