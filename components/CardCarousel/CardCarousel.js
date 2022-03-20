@@ -41,7 +41,7 @@ const CardCarousel = ({ carouselInfo, gallery, queen }) => {
 };
 
 CardCarousel.propTypes = {
-  carouselInfo: PropTypes.object.isRequired,
+  carouselInfo: PropTypes.array.isRequired,
 };
 
 export default CardCarousel;
