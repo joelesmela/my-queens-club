@@ -1,0 +1,22 @@
+.bgInfoSubs {
+  background-color: var(--bg-color);
+  width: 400px;
+  padding: 10px;
+}
+.colorLink{
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.colorLink:hover{
+  color: var(--primary-color);
+}
+
+.colorLink:focus{
+  color: var(--primary-color);
+}
+.simbol {
+  width: 2px;
+  height: 30px;
+  background-color: var(--secondary-color);
+}
