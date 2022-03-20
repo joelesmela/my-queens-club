@@ -2,10 +2,11 @@ import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
 import CardGallery from '../CardGallery/CardGallery';
+import CardHome from '../CardHome/CardHome';
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import CardHome from '../CardHome/CardHome';
 
 
 const CardCarousel = ({ carouselInfo, gallery, queen }) => {
