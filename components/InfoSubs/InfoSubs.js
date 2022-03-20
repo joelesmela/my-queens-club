@@ -11,7 +11,7 @@ const InfoSubs = () => {
       <div className={styles.simbol}>
       </div>
       <div>
-        <Link href="/" class=""><a class={`px-3 ${styles.colorLink}`}><i class="bi bi-person-plus fs-5 pe-2"></i> Registrarme</a></Link>
+        <Link href="/" class=""><a class={`px-3 ${styles.colorLink}`}><i class="bi bi-person-plus fs-5 pe-2"></i>Registrarme</a></Link>
       </div>
     </div>
   );
