@@ -2,12 +2,14 @@ import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
 import CardGallery from '../CardGallery/CardGallery';
+import CardHome from '../CardHome/CardHome';
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-const CardCarousel = ({ carouselInfo }) => {
+const CardCarousel = ({ carouselInfo, gallery, queen }) => {
   return (
     <Swiper
       slidesPerView={1}
@@ -20,7 +22,7 @@ const CardCarousel = ({ carouselInfo }) => {
           slidesPerView: 3,
         },
         1024: {
-          slidesPerView: 4,
+          slidesPerView: queen || gallery,
         },
       }}
       navigation={true}
@@ -30,7 +32,8 @@ const CardCarousel = ({ carouselInfo }) => {
       {
         carouselInfo.map((info, index) => (
           <SwiperSlide key={index}>
-            <CardGallery {...info} />
+            { gallery && <CardGallery {...info} /> }
+            { queen && <CardHome {...info} /> }
           </SwiperSlide>
         ))
       }
@@ -39,7 +42,9 @@ const CardCarousel = ({ carouselInfo }) => {
 };
 
 CardCarousel.propTypes = {
-  carouselInfo: PropTypes.object.isRequired,
+  carouselInfo: PropTypes.array.isRequired,
+  gallery: PropTypes.number,
+  queen: PropTypes.number
 };
 
 export default CardCarousel;
