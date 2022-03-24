@@ -5,11 +5,9 @@
   color: var(--secondary-color);
   text-decoration: none;
 }
-
 .colorLink:hover{
   color: var(--primary-color);
 }
-
 .colorLink:focus{
   color: var(--primary-color);
 }
