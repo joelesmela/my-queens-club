@@ -6,9 +6,12 @@
 }
 .iconColor {
   color: var(--secondary-color);
+  cursor: pointer;
 }
 .infoText {
   color: var(--secondary-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 .infoText:hover {
   color: var(--primary-color);
