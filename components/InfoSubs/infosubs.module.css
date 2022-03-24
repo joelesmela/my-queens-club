@@ -1,7 +1,5 @@
 .bgInfoSubs {
   background-color: var(--bg-color);
-  width: 400px;
-  padding: 10px;
 }
 .colorLink{
   color: var(--secondary-color);
@@ -16,7 +14,7 @@
   color: var(--primary-color);
 }
 .simbol {
-  width: 2px;
+  width: 1px;
   height: 30px;
   background-color: var(--secondary-color);
 }
