@@ -3,10 +3,12 @@ import styles from './cardhome.module.css';
 
 const CardHome = ({ src, title }) => {
   return (
-    <div className={`d-flex justify-content-center align-items-center ${styles.cardHome}`} style={{ backgroundImage: `url(${src})` }}>
-      <div className='text-center'>
-        <h4 className={`text-white mb-4 ${styles.titleName}`}>{title}</h4>
-        <button type="button" className={`btn btn-outline-light mt-1 ${styles.buttonStyle}`} >Ver Galerias</button>
+    <div className='p-1'>
+      <div className={`d-flex justify-content-center align-items-center ${styles.cardHome}`} style={{ backgroundImage: `url(${src})` }}>
+        <div className='text-center'>
+          <h4 className={`text-white mb-4 ${styles.titleName}`}>{title}</h4>
+          <button type="button" className={`btn btn-outline-light mt-1 ${styles.buttonStyle}`} >Ver Galerias</button>
+        </div>
       </div>
     </div>
   );
