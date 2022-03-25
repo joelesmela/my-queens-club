@@ -10,7 +10,7 @@
     "lint-fix": "next lint --fix",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=edda4240f48f"
+    "chromatic": "npx chromatic --project-token=edda4240f48f --auto-accept-changes"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
