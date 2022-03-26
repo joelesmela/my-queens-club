@@ -5,6 +5,7 @@
   z-index: 1;
   color: white;
   animation: opc 2s;
+  margin: 0;
 }
 
 @keyframes opc {
