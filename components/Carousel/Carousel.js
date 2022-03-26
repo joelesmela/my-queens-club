@@ -48,7 +48,7 @@ const Carousel = ({ carouselInfo, carouselInfoMobile }) => {
             carouselInfoMobile.map((info, index) => (
               <div className={`carousel-item ${index === 0 && 'active'}`} key={index}>
                 <div className='vw-100 h-100 position-absolute d-flex justify-content-center align-items-center text-uppercase'>
-                  <h4 className={styles.title}>{info.title}</h4>
+                  <h5 className={styles.title}>{info.title}</h5>
                 </div>
                 <Image src={info.src} width={200} height={300} layout="responsive" alt={info.alt} />
               </div>
