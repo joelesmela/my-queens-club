@@ -32,7 +32,7 @@ const Navbar = () => {
               <button type="button" className={`nav-link ${styles.buttonStyleGet} px-4 mx-0 mx-md-4 my-2 my-md-0`}>Get started</button>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Sign in</a>
+              <a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">Sign in</a>
             </li>
           </ul>
         </div>
