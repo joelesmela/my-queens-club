@@ -26,7 +26,7 @@ const Home = () => {
         <InfoSection className="my-5" />
         <Tab />
       </main>
-      
+
       <Footer />
     </div>
   );
