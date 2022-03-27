@@ -9,6 +9,7 @@ import carouselInfoMobile from '../components/Carousel/carouselDataMobile.exampl
 import styles from '../styles/Home.module.css';
 import InfoSection from '../components/InfoSection/InfoSection';
 import ModelSingIn from '../components/ModalSingIn/ModalSingIn';
+import InfoSubs from '../components/InfoSubs/InfoSubs';
 
 const Home = () => {
   return (
@@ -26,8 +27,9 @@ const Home = () => {
       </header>
 
       <main className='mb-5'>
-        <InfoSection className="my-5" />
+        <InfoSubs className='my-5' />
         <Tab />
+        <InfoSection className="my-5" />
       </main>
 
       <Footer />
