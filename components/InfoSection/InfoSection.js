@@ -1,9 +1,10 @@
-import styles from './infosection.module.css';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
+import styles from './infosection.module.css';
 
 const InfoSection = ({ className }) => {
   return (
-    <div className={`container py-2 ${styles.infoSectionContainer} ${className}`}>
+    <div className={`container py-2 ${className}`}>
       <div className='row justify-content-between'>
         <div className={`col-sm-2 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
           <i className={`bi bi-chat-square-text fs-1 ${styles.iconColor}`}></i>
@@ -32,6 +33,10 @@ const InfoSection = ({ className }) => {
       </div>
     </div>
   );
+};
+
+InfoSection.propTypes = {
+  className: PropTypes.string.isRequired,
 };
 
 export default InfoSection;
