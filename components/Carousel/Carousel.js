@@ -9,14 +9,14 @@ const Carousel = ({ carouselInfo, carouselInfoMobile }) => {
         <div className="carousel-indicators">
           {
             carouselInfo.map((info, index) => (
-              <button type="button" key={info.alt} data-bs-target="#carouselIndicators" data-bs-slide-to={index} className={index === 0 && 'active'} aria-current="true" aria-label={`Slide ${index + 1}`} />
+              <button type="button" key={info.alt} data-bs-target="#carouselIndicators" data-bs-slide-to={index} className={index === 0 ? 'active' : undefined} aria-current="true" aria-label={`Slide ${index + 1}`} />
             ))
           }
         </div>
         <div className="carousel-inner">
           {
             carouselInfo.map((info, index) => (
-              <div className={`carousel-item ${index === 0 && 'active'}`} key={info.alt}>
+              <div className={`carousel-item ${index === 0 ? 'active' : undefined}`} key={info.alt}>
                 <div className='vw-100 h-100 position-absolute d-flex justify-content-center align-items-center text-uppercase'>
                   <h3 className={styles.title}>{info.title}</h3>
                 </div>

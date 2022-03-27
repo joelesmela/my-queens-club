@@ -2,14 +2,12 @@ import { useState } from 'react';
 import styles from './modalsingin.module.css';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
-import Navbar from '../Navbar/Navbar';
 
 const ModelSingIn = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
     <>
-    <Navbar />
     <div className="modal fade" id="singIn" tabIndex="-1" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className={`modal-content ${styles.modal}`}>
