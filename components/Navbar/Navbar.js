@@ -3,15 +3,13 @@ import styles from './navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className={`navbar navbar-expand-lg  ${styles.bgNav}`}>
+    <nav className={`navbar navbar-expand-lg fixed-top ${styles.bgNav}`}>
       <div className="container px-4 ">
-        <div>
-          <a className="navbar-brand" href="#">
-            <Image className="w-25 d-inline-block" width={100} height={70} src='/images/logo.png' alt='logo'/>
-          </a>
-        </div>
+        <a className="navbar-brand" href="#">
+          <Image className="w-25 d-inline-block" width={100} height={70} src='/images/logo.png' alt='logo'/>
+        </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse flex-grow-0" id="navbarCollapse">
           <ul className="navbar-nav mb-2 mb-lg-0">

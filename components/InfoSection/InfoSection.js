@@ -1,9 +1,9 @@
 import styles from './infosection.module.css';
 import Link from 'next/link';
 
-const InfoSection = () => {
+const InfoSection = ({ className }) => {
   return (
-    <div className={`container py-2 ${styles.infoSectionContainer}`}>
+    <div className={`container py-2 ${styles.infoSectionContainer} ${className}`}>
       <div className='row justify-content-between'>
         <div className={`col-sm-2 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
           <i className={`bi bi-chat-square-text fs-1 ${styles.iconColor}`}></i>
