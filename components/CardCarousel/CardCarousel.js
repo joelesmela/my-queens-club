@@ -1,13 +1,13 @@
+/* eslint-disable import/no-unresolved */
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from "swiper";
+import { Navigation } from 'swiper';
 import CardGallery from '../CardGallery/CardGallery';
 import CardHome from '../CardHome/CardHome';
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const CardCarousel = ({ carouselInfo, gallery, queen }) => {
   return (
@@ -44,7 +44,7 @@ const CardCarousel = ({ carouselInfo, gallery, queen }) => {
 CardCarousel.propTypes = {
   carouselInfo: PropTypes.array.isRequired,
   gallery: PropTypes.number,
-  queen: PropTypes.number
+  queen: PropTypes.number,
 };
 
 export default CardCarousel;

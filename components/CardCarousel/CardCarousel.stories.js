@@ -13,13 +13,13 @@ const Template = (args) => <CardCarousel {...args} />;
 export const GalleryCard = {
   args: {
     carouselInfo: carouselGalleryInfo,
-    gallery: 4
+    gallery: 4,
   },
 };
 
 export const QueenCard = {
   args: {
     carouselInfo: carouselQueenInfo,
-    queen: 5
+    queen: 5,
   },
 };

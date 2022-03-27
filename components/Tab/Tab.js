@@ -51,7 +51,7 @@ const Tab = ({ className }) => {
         <div className="tab-pane fade show active" id="pills-queens" role="tabpanel" aria-labelledby="pills-queens-tab">
           <CardCarousel carouselInfo={carouselQueenData} queen={5} />
         </div>
-        
+
         <div className="tab-pane fade" id="pills-films" role="tabpanel"
         aria-labelledby="pills-films-tab">
           <div className='vh-100 d-flex justify-content-center align-items-center'>
@@ -61,6 +61,6 @@ const Tab = ({ className }) => {
       </div>
     </>
   );
-}
- 
+};
+
 export default Tab;
