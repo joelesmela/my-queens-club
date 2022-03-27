@@ -3,25 +3,49 @@
   font-size: 20px;
   border-radius: 5px;
   border-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 .placeholder{
-  background-color: #282828;
+  background-color: var(--bg-color);
   border-radius: 5px;
-  border-color: #cccccc;
+  border-color: var(--primary-color);
+  color: var(--secondary-color)
 }
 .placeholder:focus, .placeholder:active{
-  background-color: #282828;
+  background-color: var(--bg-color);
   border-radius: 5px;
-  border-color: #cccccc;
+  border-color: var(--primary-color);
   box-shadow: none;
+  color: var(--secondary-color)
+}
+.check{
+  color: var(--secondary-color)
+}
+.checkBox{
+  background-color: var(--secondary-color);
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.checkBox:checked{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.checkBox:focus{
+  box-shadow: transparent;
+  border-color: transparent;
 }
 .button{
   background-color: var(--primary-color);
   border-radius: 5px;
   border-color: var(--primary-color);
+  transition: .5s;
 }
 .button:hover{
   background-color: var(--secondary-color);
   border-radius: 5px;
-  border-color: var(--secondary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color)
 }

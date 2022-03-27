@@ -9,7 +9,7 @@ const CardGallery = ({
     <div className='p-1'>
       <div className={styles.cardGallery}>
         <div className='position-relative'>
-          <Image src={src} alt={alt} height={1920} width={1200} layout="responsive" quality priority />
+          <Image src={src} alt={alt} height={1920} width={1200} layout="responsive" quality={100} priority />
           <div className='text-white px-2 py-1 bg-dark bg-opacity-75 position-absolute bottom-0 end-0 d-flex'>
             <i className="bi bi-camera me-1" />
             <div className={styles.imageQuantity}>{imageQuantity}</div>

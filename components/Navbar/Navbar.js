@@ -3,7 +3,7 @@ import styles from './navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${styles.bgNav}`}>
+    <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
       <div className="container px-4 ">
         <a className="navbar-brand" href="#">
           <Image className="w-25 d-inline-block" width={100} height={70} src='/images/logo.png' alt='logo'/>
@@ -32,7 +32,7 @@ const Navbar = () => {
               <button type="button" className={`nav-link ${styles.buttonStyleGet} px-4 mx-0 mx-md-4 my-2 my-md-0`}>Get started</button>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#">Sign in</a>
+              <a className={`nav-link ${styles.colorLink}`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">Sign in</a>
             </li>
           </ul>
         </div>
