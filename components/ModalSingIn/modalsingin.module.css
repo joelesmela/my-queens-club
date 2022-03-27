@@ -1,6 +1,5 @@
 .modal{
   width: 100vh;
-  height: 60vh;
   background-color: var(--bg-color);
   padding: 40px;
   border-radius: 5px;

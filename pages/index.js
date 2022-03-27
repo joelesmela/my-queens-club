@@ -8,6 +8,7 @@ import carouselInfoMobile from '../components/Carousel/carouselDataMobile.exampl
 
 import styles from '../styles/Home.module.css';
 import InfoSection from '../components/InfoSection/InfoSection';
+import ModelSingIn from '../components/ModalSingIn/ModalSingIn';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
 
       <header>
         <Navbar />
+        <ModelSingIn />
         <Carousel carouselInfo={carouselInfo} carouselInfoMobile={carouselInfoMobile} />
       </header>
 
