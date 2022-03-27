@@ -1,18 +1,17 @@
-.bgInfoSubs {
-  background-color: var(--bg-color);
-}
 .colorLink{
   color: var(--secondary-color);
   text-decoration: none;
 }
 .colorLink:hover{
   color: var(--primary-color);
+  transition: .5s;
 }
 .colorLink:focus{
   color: var(--primary-color);
 }
 .simbol {
+  padding: 0;
   width: 1px;
-  height: 30px;
+  height: 60px;
   background-color: var(--secondary-color);
 }
