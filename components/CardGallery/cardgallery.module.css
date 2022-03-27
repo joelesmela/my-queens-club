@@ -1,5 +1,5 @@
 .cardGallery{
-  background-color: #171717;
+  background-color: var(--bg-color-secondary);
 }
 
 .titleName{

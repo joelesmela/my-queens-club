@@ -13,21 +13,21 @@ const InfoSection = ({ className }) => {
           </Link>
         </div>
         <div className={`col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
-          <i className={`bi bi-cart4 fs-1 ${styles.iconColor}`}></i>
-          <Link href="/">
-            <spam className={styles.infoText}>COMO COMPRAR</spam>
-          </Link>
-        </div>
-        <div className={`col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
           <i className={`bi bi-credit-card-2-back fs-1 ${styles.iconColor}`}></i>
           <Link href="/">
             <spam className={styles.infoText}>MEDIOS DE PAGO</spam>
           </Link>
         </div>
         <div className={`col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
-          <i className={`bi bi-truck fs-1 ${styles.iconColor}`}></i>
+          <i className={`bi bi-question-circle fs-1 ${styles.iconColor}`}></i>
           <Link href="/">
-            <spam className={styles.infoText}>FORMAS DE ENVIO</spam>
+            <spam className={styles.infoText}>PREGUNTAS FRECUENTES</spam>
+          </Link>
+        </div>
+        <div className={`col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
+          <i className={`bi bi-person-fill fs-1 ${styles.iconColor}`}></i>
+          <Link href="/">
+            <spam className={styles.infoText}>MI CUENTA</spam>
           </Link>
         </div>
       </div>
