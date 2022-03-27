@@ -4,12 +4,12 @@ import styles from './tab.module.css';
 import carouselGalleryData from '../CardCarousel/carouselGalleryData.example.json';
 import carouselQueenData from '../CardCarousel/carouselQueenData.example.json';
 
-const Tab = () => {
+const Tab = ({ className }) => {
   const [activeTab, setActiveTab] = useState(2);
 
   return (
     <>
-      <ul className={`row gx-0 nav mb-3 ${styles['nav-pills']}`} id="pills-tab" role="tablist">
+      <ul className={`row gx-0 nav mb-3 ${styles['nav-pills']} ${className}`} id="pills-tab" role="tablist">
         <div className="col-12 col-md-4 p-1">
           <li className={`nav-item ${styles.bgTab}`} role="presentation" style={{ backgroundImage: 'url("https://cdnmansite.metartnetwork.com/static/media/photography.493d088d5e7196be7f4a.jpg")' }}>
             <button className={`text-uppercase w-100 py-5 text-white ${activeTab === 1 && styles.active} ${styles['tab-nav-link']}`} id="pills-galerias-tab" data-bs-toggle="pill" data-bs-target="#pills-galerias" type="button" role="tab" aria-controls="pills-galerias" aria-selected="true" onClick={() => setActiveTab(1)}>

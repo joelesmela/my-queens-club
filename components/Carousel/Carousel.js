@@ -69,7 +69,8 @@ const Carousel = ({ carouselInfo, carouselInfoMobile }) => {
 };
 
 Carousel.propTypes = {
-  carouselInfo: PropTypes.object.isRequired,
+  carouselInfo: PropTypes.array.isRequired,
+  carouselInfoMobile: PropTypes.array.isRequired,
 };
 
 export default Carousel;

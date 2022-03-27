@@ -1,16 +1,8 @@
-.infoSectionContainer {
-  background-color: black;
-}
 .box {
-  height: 100px;
-}
-.iconColor {
   color: var(--secondary-color);
+  cursor: pointer;
+  transition: 0.3s;
 }
-.infoText {
-  color: var(--secondary-color);
-}
-.infoText:hover {
+.box:hover {
   color: var(--primary-color);
 }
-
