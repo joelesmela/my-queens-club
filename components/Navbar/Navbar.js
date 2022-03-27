@@ -3,7 +3,7 @@ import styles from './navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${styles.bgNav}`}>
+    <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
       <div className="container px-4 ">
         <a className="navbar-brand" href="#">
           <Image className="w-25 d-inline-block" width={100} height={70} src='/images/logo.png' alt='logo'/>

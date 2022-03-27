@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Carousel from '../components/Carousel/Carousel';
 import Navbar from '../components/Navbar/Navbar';
-import carouselInfo from '../components/Carousel/carouselData.example.json';
 import Footer from '../components/Footer/Footer';
 import Tab from '../components/Tab/Tab';
+import carouselInfo from '../components/Carousel/carouselData.example.json';
+import carouselInfoMobile from '../components/Carousel/carouselDataMobile.example.json';
 
 import styles from '../styles/Home.module.css';
 import InfoSection from '../components/InfoSection/InfoSection';
@@ -19,7 +20,7 @@ const Home = () => {
 
       <header>
         <Navbar />
-        <Carousel carouselInfo={carouselInfo} />
+        <Carousel carouselInfo={carouselInfo} carouselInfoMobile={carouselInfoMobile} />
       </header>
 
       <main className='mb-5'>
