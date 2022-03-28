@@ -8,7 +8,7 @@ import carouselInfoMobile from '../components/Carousel/carouselDataMobile.exampl
 
 import styles from '../styles/Home.module.css';
 import InfoSection from '../components/InfoSection/InfoSection';
-import ModelSingIn from '../components/ModalSingIn/ModalSingIn';
+import ModalSingIn from '../components/ModalSingIn/ModalSingIn';
 import InfoSubs from '../components/InfoSubs/InfoSubs';
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
 
       <header>
         <Navbar />
-        <ModelSingIn />
+        <ModalSingIn idModal='singIn'/>
         <Carousel carouselInfo={carouselInfo} carouselInfoMobile={carouselInfoMobile} />
       </header>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import styles from './infosubs.module.css';
+import ModalSingIn from '../ModalSingIn/ModalSingIn';
 
 const InfoSubs = ({ className }) => {
   return (
@@ -12,7 +13,8 @@ const InfoSubs = ({ className }) => {
         </div>
         <div className={`d-none d-md-block ${styles.simbol}`}/>
         <div className='col-12 col-md-5 col-lg-4 d-flex justify-content-center'>
-          <Link href="/"><a className={`d-flex align-items-center fs-5 ${styles.colorLink}`}><i className="bi bi-person-plus fs-1 pe-4"></i>REGISTRARME</a></Link>
+          <a className={`d-flex align-items-center fs-5 ${styles.colorLink}`} data-bs-toggle="modal" data-bs-target="#register"><i className="bi bi-person-plus fs-1 pe-4"></i>REGISTRARME</a>
+          <ModalSingIn isRegister idModal='register' activeRegister={2}/>
         </div>
       </div>
     </div>

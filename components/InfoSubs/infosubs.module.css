@@ -1,6 +1,7 @@
 .colorLink{
   color: var(--secondary-color);
   text-decoration: none;
+  cursor: pointer;
 }
 .colorLink:hover{
   color: var(--primary-color);

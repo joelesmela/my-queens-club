@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
       <div className="container px-4 ">
         <a className="navbar-brand" href="#">
-          <Image className="w-25 d-inline-block" width={100} height={70} src='/images/logo.png' alt='logo'/>
+          <Image width={142.1} height={61} src='/images/logo.png' alt='logo' quality={100} />
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
