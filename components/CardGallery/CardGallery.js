@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './cardgallery.module.css';
 
 const CardGallery = ({
-  src, title, alt, galleryName, imageQuantity,
+  src, title, alt, galleryName, imageQuantity, price, gallery,
 }) => {
   return (
     <div className='p-1'>
@@ -15,8 +15,22 @@ const CardGallery = ({
             <div className={styles.imageQuantity}>{imageQuantity}</div>
           </div>
         </div>
-        <p className={`text-white pt-3 pb-2 px-3 m-0 fw-normal fs-6 ${styles.titleName}`}>{galleryName}</p>
-        <p className={`text-secondary pt-1 pb-3 px-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
+        <div className='px-3'>
+          <p className={`pt-3 pb-2 m-0 fw-normal fs-6 ${styles.titleName} ${gallery ? 'text-center' : 'text-start'}`}>{galleryName}</p>
+          {
+            !gallery
+              ? <p className={`text-secondary pt-1 pb-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
+              : (
+                <>
+                  <p className={`text-secondary text-center pt-1 pb-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
+                  <p className={`pt-1 pb-3 m-0 fw-light text-center ${styles.priceGallery}`}>${price} / mes durante un mes</p>
+                  <div className='d-flex justify-content-center pb-3'>
+                    <button className={`btn ${styles.button}`}>Suscribete</button>
+                  </div>
+                </>
+              )
+          }
+        </div>
       </div>
     </div>
   );
@@ -28,6 +42,12 @@ CardGallery.propTypes = {
   alt: PropTypes.string.isRequired,
   galleryName: PropTypes.string.isRequired,
   imageQuantity: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+  gallery: PropTypes.bool,
+};
+
+CardGallery.defaultProps = {
+  gallery: false,
 };
 
 export default CardGallery;

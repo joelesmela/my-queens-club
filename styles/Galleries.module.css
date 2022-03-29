@@ -1,0 +1,7 @@
+.bgHome{
+  background-color: var(--bg-color);
+}
+
+.title{
+  color: var(--secondary-color);
+}
