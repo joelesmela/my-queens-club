@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container px-4 ">
         <Link href='/' passHref>
           <a>
-            <Image width={142.1} height={61} src='/images/logo.png' alt='logo' quality={100} />
+            <Image width={147.6} height={61} src='/images/logo.png' alt='logo' quality={100} />
           </a>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
