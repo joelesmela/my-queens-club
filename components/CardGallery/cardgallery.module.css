@@ -24,11 +24,6 @@
 .button{
   background-color: var(--primary-color);
   color: var(--secondary-color);
-}
-
-.button{
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
   padding: .618em 1em;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 1;
