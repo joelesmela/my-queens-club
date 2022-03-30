@@ -16,16 +16,27 @@ const CardGallery = ({
           </div>
         </div>
         <div className='px-3'>
-          <p className={`pt-3 pb-2 m-0 fw-normal fs-6 ${styles.titleName} ${gallery ? 'text-center' : 'text-start'}`}>{galleryName}</p>
           {
             !gallery
-              ? <p className={`text-secondary pt-1 pb-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
+              ? (
+                <>
+                  <p className={`col-6 pt-3 pb-2 m-0 fw-normal fs-6 ${styles.titleName}`}>{galleryName}</p>
+                  <p className={`text-secondary pt-1 pb-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
+                </>
+              )
               : (
                 <>
-                  <p className={`text-secondary text-center pt-1 pb-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
-                  <p className={`pt-1 pb-3 m-0 fw-light text-center ${styles.priceGallery}`}>${price} / mes durante un mes</p>
-                  <div className='d-flex justify-content-center pb-3'>
-                    <button className={`btn ${styles.button}`}>Suscribete</button>
+                  <div className="row">
+                    <p className={`col-6 pt-3 pb-2 m-0 fw-normal fs-6 ${styles.titleName}`}>{galleryName}</p>
+                    <p className={`col-6 pt-3 pb-2 m-0 fw-light text-end ${styles.priceGallery}`}>${price} / mes</p>
+                  </div>
+                  <div className='row pb-3 pt-2'>
+                    <div className='col-6'>
+                      <p className={`text-secondary m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
+                    </div>
+                    <div className='col-6 d-flex justify-content-end align-items-center m-0'>
+                      <button className={`btn ${styles.button}`}>Suscribete</button>
+                    </div>
                   </div>
                 </>
               )
