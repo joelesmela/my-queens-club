@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Carousel from '../components/Carousel/Carousel';
-import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import Tab from '../components/Tab/Tab';
 import carouselInfo from '../components/Carousel/carouselData.example.json';
@@ -21,7 +20,6 @@ const Home = () => {
       </Head>
 
       <header>
-        <Navbar />
         <ModalSingIn idModal='singIn'/>
         <Carousel carouselInfo={carouselInfo} carouselInfoMobile={carouselInfoMobile} />
       </header>

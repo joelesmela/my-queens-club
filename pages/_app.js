@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar/Navbar';
 
 const MyApp = ({ Component, pageProps }) => {
   const [isScreenShoot, setIsScreenShoot] = useState(false);
@@ -41,6 +42,7 @@ const MyApp = ({ Component, pageProps }) => {
         />
 
       <div className={`bg-dark vh-100 ${isScreenShoot ? 'd-block' : 'd-none'}`} />
+      <Navbar />
       <Component {...pageProps} />
     </div>
   );

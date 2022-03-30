@@ -1,13 +1,16 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
       <div className="container px-4 ">
-        <a className="navbar-brand" href="#">
-          <Image width={142.1} height={61} src='/images/logo.png' alt='logo' quality={100} />
-        </a>
+        <Link href='/' passHref>
+          <a>
+            <Image width={142.1} height={61} src='/images/logo.png' alt='logo' quality={100} />
+          </a>
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -17,7 +20,9 @@ const Navbar = () => {
               <a className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#">Updates</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#">Galleries</a>
+              <Link href='/galleries' >
+                <a className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Galleries</a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#">Films</a>
