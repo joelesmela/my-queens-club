@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './infosubs.module.css';
 import ModalSingIn from '../ModalSingIn/ModalSingIn';
 import ModalInfo from '../ModalInfo/ModalInfo';
-import suscribeInfo from '../../data/modalInfoData.example.json';
+import suscribeInfo from '../../data/modalInfo.json';
 
 const InfoSubs = ({ className }) => {
   return (
