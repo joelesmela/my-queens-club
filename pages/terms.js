@@ -19,8 +19,8 @@ const Terms = () => {
         <h5 className={`text-uppercase fw-bolder text-center py-5 ${styles.title}`}>TÉRMINOS Y CONDICIONES</h5>
       </header>
 
-      <main className=''>
-        <section className=''>
+      <main className='mb-5 container-fluid'>
+        <section>
           <p className={`m-4 px-3 ${styles.terms}`}>{data.presentation}</p>
           <p className={`m-4 px-3 ${styles.terms}`}>{data.title1}</p>
           <p className={`m-4 px-3 ${styles.terms}`}>{data.par1}</p>
