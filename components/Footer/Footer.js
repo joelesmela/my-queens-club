@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './footer.module.css';
 import logo from '../../public/images/logo1.png';
 
@@ -22,7 +23,11 @@ const Footer = () => {
           </div>
           <div className='col-lg-6 col-md-12 col-12 mt-3 align-items-center d-flex justify-content-center'>
             <div className='w-75'>
-              <Image src={logo} alt='My Queens Club' height={2250} width={4000} quality={100}/>
+              <Link href='/' passHref>
+                <a>
+                  <Image src={logo} alt='My Queens Club' height={2250} width={4000} quality={100}/>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -30,7 +35,9 @@ const Footer = () => {
           <div className='col-lg-6 col-md-6 col-12'>
             <h4 className={`pt-4 pt-md-3 text-center ${styles.title}`}>Términos y condiciones</h4>
             <div className='row'>
-              <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Políticas de privacidad</a>
+              <Link href='/politics'>
+                <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Políticas de privacidad</a>
+              </Link>
               <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Términos y condiciones</a>
             </div>
           </div>
