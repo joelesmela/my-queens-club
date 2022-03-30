@@ -1,0 +1,24 @@
+.modal{
+  width: 100vh;
+  background-color: var(--bg-color);
+  padding: 40px;
+  border-radius: 5px;
+}
+.title{
+  color: var(--secondary-color);
+}
+.text{
+  color: var(--secondary-color);
+}
+.line{
+  border-bottom: 1px solid var(--primary-color);
+}
+.btn{
+  background-color: var(--primary-color);
+  color: var(--secondary-color)
+}
+.btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: .5s;
+}
