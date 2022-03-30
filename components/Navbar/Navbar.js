@@ -28,7 +28,9 @@ const Navbar = () => {
               <a className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#">Films</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#">Queens</a>
+              <Link href='/queens' >
+                <a className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Queens</a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#">Join the Club</a>
