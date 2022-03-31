@@ -23,73 +23,11 @@ const Politics = () => {
         <section>
           <p className={`m-4 px-3 ${styles.politics}`}>{data.pre}</p>
           <p className={`m-4 px-3 ${styles.politics}`}>{data.presentation}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par1}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par2}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par3}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par4}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par5}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par6}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par7}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par8}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par9}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par10}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par11}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par12}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par13}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par14}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par15}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par16}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par17}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par18}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par19}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par20}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par21}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par22}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par23}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par24}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par25}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par26}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par27}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par28}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par29}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par30}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par31}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par32}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par33}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par34}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par35}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par36}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par37}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par38}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par39}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par40}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par41}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par42}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par43}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par44}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par45}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par46}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par47}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par48}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par49}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par50}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par51}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par52}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par53}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par54}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par55}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par56}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par57}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par58}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par59}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par60}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par61}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par62}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par63}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par64}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par65}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par66}</p>
-          <p className={`m-4 px-3 ${styles.politics}`}>{data.par67}</p>
+          {
+            data.parrafos.map((par, index) => (
+              <p key={index} className={`m-4 px-3 ${styles.politics}`}>{par}</p>
+            ))
+          }
         </section>
       </main>
 
