@@ -22,51 +22,11 @@ const Terms = () => {
       <main className='mb-5 container-fluid'>
         <section>
           <p className={`m-4 px-3 ${styles.terms}`}>{data.presentation}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title1}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par1}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title2}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par2}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title3}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par3}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par3a}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par3b}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par3c}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title4}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par4}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title5}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par5}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title6}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par6}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par6a}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par6b}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par6c}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par6d}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title7}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par7}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title8}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par8}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title9}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par9}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title10}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par10}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title11}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par11}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title12}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par12}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title13}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par13}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title14}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par14}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title15}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par15}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par15a}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title16}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par16}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title17}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par17}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.title18}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par18}</p>
-          <p className={`m-4 px-3 ${styles.terms}`}>{data.par18a}</p>
+          {
+            data.parrafos.map((par, index) => (
+              <p key={index} className={`m-4 px-3 ${styles.terms}`}>{par}</p>
+            ))
+          }
         </section>
       </main>
 
