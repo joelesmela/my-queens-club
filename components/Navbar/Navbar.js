@@ -1,15 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './navbar.module.css';
-import Link from 'next/link'
 
 const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
       <div className="container px-4 ">
-        <a className="navbar-brand" href="#">
-          <Image width={142.1} height={61} src='/images/logo.png' alt='logo' quality={100} />
-        </a>
-        <button className={`navbar-toggler ${styles.buttonCollapse}`}  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <Link href='/' passHref>
+          <a>
+            <Image width={147.6} height={61} src='/images/logo.png' alt='logo' quality={100} />
+          </a>
+        </Link>
+        <button className={`navbar-toggler ${styles.buttonCollapse}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <i class={`fs-1 bi bi-justify ${styles.buttonCollIcon}`}></i>
         </button>
         <div className="collapse navbar-collapse flex-grow-0" id="navbarCollapse">
@@ -20,8 +22,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="./">
-                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Galerias</span>
+              <Link href='/galleries' >
+                <a className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Galleries</a>
               </Link>
             </li>
             <li className="nav-item">
@@ -30,8 +32,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="./">
-                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Queens</span>
+              <Link href='/queens' >
+                <a className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Queens</a>
               </Link>
             </li>
             <li className="nav-item">
