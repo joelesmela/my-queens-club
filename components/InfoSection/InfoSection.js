@@ -18,9 +18,11 @@ const InfoSection = ({ className }) => {
           <i className={`bi bi-question-circle fs-1 ${styles.iconColor}`}></i>
             <span>PREGUNTAS FRECUENTES</span>
         </div>
-        <div className={`col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`} data-bs-toggle="modal" data-bs-target="#login">
-          <i className={`bi bi-person-fill fs-1 ${styles.iconColor}`}></i>
-            <span>MI CUENTA</span>
+        <div className={`col-sm-12 col-md-6 col-lg-3 ${styles.box}`}>
+          <div className='d-flex flex-column justify-content-center align-items-center' data-bs-toggle="modal" data-bs-target="#login">
+            <i className={`bi bi-person-fill fs-1 ${styles.iconColor}`}></i>
+              <span>MI CUENTA</span>
+          </div>
           <ModalSingIn isLogin idModal='login' activeLogin={1}/>
         </div>
       </div>
