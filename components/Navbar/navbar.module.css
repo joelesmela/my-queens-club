@@ -4,6 +4,7 @@
 
 .colorLink{
   color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .colorLink:hover{
@@ -22,10 +23,14 @@
   border-radius: 2px;
 }
 
-.buttonStyleGet:hover {
+.buttonStyleGet:hover{
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border: 2px solid var(--secondary-color);
+}
+
+.buttonStyleGet:focus{
+  color: var(--secondary-color);
 }
 
 .buttonCollapse{
