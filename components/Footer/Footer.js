@@ -35,10 +35,12 @@ const Footer = () => {
           <div className='col-lg-6 col-md-6 col-12'>
             <h4 className={`pt-4 pt-md-3 text-center ${styles.title}`}>Términos y condiciones</h4>
             <div className='row'>
-              <Link href='/politics'>
+              <Link href='/politics' passHref>
                 <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Políticas de privacidad</a>
               </Link>
-              <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Términos y condiciones</a>
+              <Link href='/terms' passHref>
+                <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Términos y condiciones</a>
+              </Link>
             </div>
           </div>
           <div className='col-lg-6 col-md-6 col-12'>
