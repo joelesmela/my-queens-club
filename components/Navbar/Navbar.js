@@ -12,7 +12,7 @@ const Navbar = () => {
           </a>
         </Link>
         <button className={`navbar-toggler ${styles.buttonCollapse}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <i class={`fs-1 bi bi-justify ${styles.buttonCollIcon}`}></i>
+          <i className={`fs-1 bi bi-justify ${styles.buttonCollIcon}`}></i>
         </button>
         <div className="collapse navbar-collapse flex-grow-0" id="navbarCollapse">
           <ul className="navbar-nav mb-2 mb-lg-0">

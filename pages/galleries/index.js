@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Footer from '../components/Footer/Footer';
-import ModalSingIn from '../components/ModalSingIn/ModalSingIn';
-import CardGallery from '../components/CardGallery/CardGallery';
+import Footer from '../../components/Footer/Footer';
+import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
+import CardGallery from '../../components/CardGallery/CardGallery';
 
-import styles from '../styles/Galleries.module.css';
-import data from '../data/galleries.example.json';
+import styles from '../../styles/Galleries.module.css';
+import data from '../../data/galleries.example.json';
 
 const Galleries = () => {
   return (
