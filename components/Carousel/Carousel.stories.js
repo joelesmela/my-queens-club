@@ -8,7 +8,9 @@ const Component = {
   component: Carousel,
 };
 
-const Template = () => <Carousel carouselInfo={carouselInfo} carouselInfoMobile={carouselInfoMobile} />;
+const Template = () => (
+  <Carousel carouselInfo={carouselInfo} carouselInfoMobile={carouselInfoMobile} />
+);
 
 export const Default = Template.bind({});
 export default Component;

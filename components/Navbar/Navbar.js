@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse flex-grow-0" id="navbarCollapse">
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link href="./">
+              <Link href="/" passHref>
                 <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Actualizaciones</span>
               </Link>
             </li>
@@ -27,7 +27,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="./">
+              <Link href="/" passHref>
                 <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Videos</span>
               </Link>
             </li>
@@ -37,7 +37,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="./">
+              <Link href="/" passHref>
                 <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Únete al club</span>
               </Link>
             </li>
@@ -45,7 +45,7 @@ const Navbar = () => {
               <button type="button" className={`nav-link ${styles.buttonStyleGet} px-4 mx-0 mx-md-3 my-2 my-md-0`}>Empezar</button>
             </li>
             <li className="nav-item">
-              <Link href="./">
+              <Link href="/" passHref>
                 <span className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">iniciar sesión</span>
               </Link>
             </li>

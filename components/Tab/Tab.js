@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import CardCarousel from '../CardCarousel/CardCarousel';
 import styles from './tab.module.css';
 import carouselGalleryData from '../CardCarousel/carouselGalleryData.example.json';
@@ -61,6 +62,10 @@ const Tab = ({ className }) => {
       </div>
     </>
   );
+};
+
+Tab.propTypes = {
+  className: PropTypes.string.isRequired,
 };
 
 export default Tab;
