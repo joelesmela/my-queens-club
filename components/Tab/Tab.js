@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CardCarousel from '../CardCarousel/CardCarousel';
 import styles from './tab.module.css';
 import carouselGalleryData from '../CardCarousel/carouselGalleryData.example.json';
-import carouselQueenData from '../CardCarousel/carouselQueenData.example.json';
+import carouselQueenData from '../../data/queens.example.json';
 
 const Tab = ({ className }) => {
   const [activeTab, setActiveTab] = useState(2);
