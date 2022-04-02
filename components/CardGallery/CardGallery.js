@@ -1,13 +1,20 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import styles from './cardgallery.module.css';
 
 const CardGallery = ({
-  src, title, alt, galleryName, imageQuantity, price, gallery,
+  src, title, alt, galleryName, imageQuantity, price, gallery, id,
 }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/gallery/${id}`);
+  };
+
   return (
     <div className='p-1'>
-      <div className={styles.cardGallery}>
+      <div className={styles.cardGallery} onClick={handleClick}>
         <div className='position-relative'>
           <Image src={src} alt={alt} height={1920} width={1200} layout="responsive" quality={100} priority />
           <div className='text-white px-2 py-1 bg-dark bg-opacity-75 position-absolute bottom-0 end-0 d-flex'>
@@ -55,6 +62,7 @@ CardGallery.propTypes = {
   imageQuantity: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
   gallery: PropTypes.bool,
+  id: PropTypes.string.isRequired,
 };
 
 CardGallery.defaultProps = {
