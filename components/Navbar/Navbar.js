@@ -18,12 +18,12 @@ const Navbar = () => {
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
               <Link href="/" passHref>
-                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Actualizaciones</span>
+                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Lo nuevo</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link href='/galleries' >
-                <a className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Galleries</a>
+                <a className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Galerias</a>
               </Link>
             </li>
             <li className="nav-item">
@@ -46,7 +46,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link href="/" passHref>
-                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">iniciar sesión</span>
+                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">Iniciar sesión</span>
               </Link>
             </li>
           </ul>
