@@ -5,7 +5,8 @@
     "alt": "gallery-carousel-too-hot",
     "galleryName": "Too Hot",
     "imageQuantity": 14,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "1"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-In-The-Club-1.jpg?time=1648232498",
@@ -13,7 +14,8 @@
     "alt": "gallery-carousel-In-club",
     "galleryName": "In the club",
     "imageQuantity": 21,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "2"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-Angelic-2.jpg",
@@ -21,7 +23,8 @@
     "alt": "gallery-carousel-Angelic",
     "galleryName": "Angelic",
     "imageQuantity": 28,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "3"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-Softly-3.jpg",
@@ -29,7 +32,8 @@
     "alt": "gallery-carousel-Softly",
     "galleryName": "Softly",
     "imageQuantity": 20,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "4"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/02/Portada-Valentines-Day-2.jpg",
@@ -37,7 +41,8 @@
     "alt": "model-carousel-my-photo",
     "galleryName": "Valentine Day",
     "imageQuantity": 23,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "5"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/02/Portada-Reddish-1.jpg",
@@ -45,7 +50,8 @@
     "alt": "model-carousel-Reddish",
     "galleryName": "Reddish",
     "imageQuantity": 16,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "6"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-Too-Hot-3.jpg",
@@ -53,7 +59,8 @@
     "alt": "gallery-carousel-too-hot",
     "galleryName": "Too Hot",
     "imageQuantity": 14,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "1"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-In-The-Club-1.jpg?time=1648232498",
@@ -61,7 +68,8 @@
     "alt": "gallery-carousel-In-club",
     "galleryName": "In the club",
     "imageQuantity": 21,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "2"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-Angelic-2.jpg",
@@ -69,7 +77,8 @@
     "alt": "gallery-carousel-Angelic",
     "galleryName": "Angelic",
     "imageQuantity": 28,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "3"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/03/Portada-Softly-3.jpg",
@@ -77,7 +86,8 @@
     "alt": "gallery-carousel-Softly",
     "galleryName": "Softly",
     "imageQuantity": 20,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "4"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/02/Portada-Valentines-Day-2.jpg",
@@ -85,7 +95,8 @@
     "alt": "model-carousel-my-photo",
     "galleryName": "Valentine Day",
     "imageQuantity": 23,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "5"
   },
   {
     "src": "https://secureservercdn.net/198.71.233.83/3xs.6a8.myftpupload.com/wp-content/uploads/2022/02/Portada-Reddish-1.jpg",
@@ -93,6 +104,7 @@
     "alt": "model-carousel-Reddish",
     "galleryName": "Reddish",
     "imageQuantity": 16,
-    "price": 2000
+    "price": 2000,
+    "idqueen": "6"
   }
 ]
