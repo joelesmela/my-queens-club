@@ -20,7 +20,7 @@ const Carousel = ({ carouselInfo, carouselInfoMobile }) => {
                 <div className='vw-100 h-100 position-absolute d-flex justify-content-center align-items-center text-uppercase'>
                   <h3 className={styles.title}>{info.title}</h3>
                 </div>
-                <Image src={info.src} width={300} height={200} layout="responsive" alt={info.alt} />
+                <Image src={info.src} width={1636} height={960} layout="responsive" alt={info.alt} />
               </div>
             ))
           }
