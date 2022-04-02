@@ -65,7 +65,7 @@ const Tab = ({ className }) => {
 };
 
 Tab.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default Tab;
