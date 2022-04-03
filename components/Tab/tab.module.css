@@ -13,8 +13,18 @@
   border: 2px solid var(--primary-color);
   background-color: #00000000;
   text-shadow: 2px 2px 3px #000000;
+  color: var(--secondary-color);
+}
+
+.icon{
+  color: var(--secondary-color);
 }
 
 .iconColor{
   color: transparent;
+}
+
+
+.text{
+  color: var(--secondary-color);
 }
