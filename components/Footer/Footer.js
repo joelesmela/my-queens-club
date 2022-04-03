@@ -35,6 +35,9 @@ const Footer = () => {
           <div className='col-lg-6 col-md-6 col-12'>
             <h4 className={`pt-4 pt-md-3 text-center ${styles.title}`}>Términos y condiciones</h4>
             <div className='row'>
+              <Link href='/about' passHref>
+                <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Sobre Nosotros</a>
+              </Link>
               <Link href='/politics' passHref>
                 <a className={`text-decoration-none text-center p-2 ${styles.condition}`} href='#'>Políticas de privacidad</a>
               </Link>
@@ -45,7 +48,7 @@ const Footer = () => {
           </div>
           <div className='col-lg-6 col-md-6 col-12'>
             <h4 className={`pt-4 pt-md-3 text-center ${styles.title}`}>Redes Sociales</h4>
-            <div className='d-flex justify-content-center pb-3'>
+            <div className='d-flex justify-content-center py-3'>
               <a href="https://www.facebook.com/myqueensclub" target='_blank' rel='noreferrer' className={`pe-2 ${styles.icon}`}><i className="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/myqueensclub/?hl=es" target='_blank' rel='noreferrer' className={`ps-2 ${styles.icon}`}><i className="bi bi-instagram"></i></a>
             </div>
