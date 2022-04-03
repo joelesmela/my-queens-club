@@ -33,3 +33,17 @@
 .error{
   color: var(--primary-color);
 }
+
+.inputStyle{
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.inputStyle:focus, .inputStyle:active{
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  border-color: var(--primary-color);
+  box-shadow: none;
+  color: var(--secondary-color);
+}

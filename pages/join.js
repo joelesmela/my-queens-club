@@ -47,38 +47,38 @@ const Join = () => {
             <div className='col-sm-12 col-md-12 col-lg-6 d-flex flex-column mb-3 justify-content-center'>
 
               <label for="inputName" className={`form-label ${styles.text}`}>Nombre</label>
-              <input type="text" {...register("firstName", { required: true })}  className="form-control" id="inputName" aria-describedby="Ingresa tu nombre"/>
+              <input type="text" {...register("firstName", { required: true })} className={`form-control ${styles.inputStyle}`} id="inputName" aria-describedby="Ingresa tu nombre"/>
               {errors.firstName?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El nombre es requerido</span>}
 
               <label for="inputAge" className={`form-label ${styles.text}`}>Edad</label>
-              <input type="text" {...register("age", { min: 18 }, { required: true })}  className="form-control" id="inputAge" aria-describedby="Ingresa tu edad"/>
+              <input type="text" {...register("age", { min: 18 }, { required: true })}  className={`form-control ${styles.inputStyle}`} id="inputAge" aria-describedby="Ingresa tu edad"/>
               {errors.age?.type === 'required'  && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> La edad es requerida</span>}
               {errors.age?.type === 'min'  && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> Debes tener almenos 18 años</span>}
 
               <label for="inputInstagram" className={`form-label ${styles.text}`}>Instagram</label>
-              <input type="text" {...register("instagram", { required: true })}  className="form-control" id="inputInstagram" aria-describedby="Ingresa tu Instagram"/>
+              <input type="text" {...register("instagram", { required: true })}  className={`form-control ${styles.inputStyle}`} id="inputInstagram" aria-describedby="Ingresa tu Instagram"/>
               {errors.instagram?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> Instagram es requerido</span>}
 
             </div>
             <div className='col-sm-12 col-md-12 col-lg-6 d-flex flex-column mb-3 justify-content-center'>
 
               <label for="lastName" className={`form-label ${styles.text}`}>Apellido</label>
-              <input type="text" {...register("lastName", { required: true })} className="form-control" id="lastName"/>
+              <input type="text" {...register("lastName", { required: true })} className={`form-control ${styles.inputStyle}`} id="lastName"/>
               {errors.lastName && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El apellido es requerido</span>}
 
               <label for="inputHeight" className={`form-label ${styles.text}`}>Altura</label>
-              <input type="text" {...register("height", { required: true })} className="form-control" id="inputHeight"/>
+              <input type="text" {...register("height", { required: true })} className={`form-control ${styles.inputStyle}`} id="inputHeight"/>
               {errors.height && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> La altura es requerida</span>}
               
               <label for="inputTelephone" className={`form-label ${styles.text}`}>Teléfono</label>
-              <input type="tel" {...register("telephone", { required: true })} className="form-control" id="inputTelephone"/>
+              <input type="tel" {...register("telephone", { required: true })} className={`form-control ${styles.inputStyle}`} id="inputTelephone"/>
               {errors.lastName && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El telefono es requerido</span>}
 
             </div>
             <div className='col-sm-12 col-md-12 col-lg-12 d-flex flex-column mb-3 justify-content-center'>
               
               <label for="inputMessage" className={`form-label ${styles.text}`}>Mensaje</label>
-              <textarea className="form-control"{...register("message", { required: true })}  id="inputMessage" rows="3"></textarea>
+              <textarea className={`form-control ${styles.inputStyle}`} {...register("message", { required: true })}  id="inputMessage" rows="3"></textarea>
               {errors.message && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El mensaje es requerido</span>}
               
             </div>
