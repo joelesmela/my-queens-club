@@ -8,6 +8,10 @@ const Register = () => {
         <span className={`input-group-text ${styles.icon}`}><i className="bi bi-at"></i></span>
         <input type="email" className={`form-control ${styles.placeholder}`} placeholder="Email" aria-label="Email" required />
       </div>
+      <div className="input-group mb-3">
+        <span className={`input-group-text ${styles.icon}`}><i className="bi bi-emoji-smile"></i></span>
+        <input type="text" className={`form-control ${styles.placeholder}`} placeholder="Nombre de Usuario" aria-label="userName" required />
+      </div>
       <div className='d-block d-md-flex'>
         <div className="input-group mb-3 me-1">
           <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
