@@ -45,9 +45,7 @@ const Navbar = () => {
               <button type="button" className={`nav-link ${styles.buttonStyleGet} px-4 px-lg-3 mx-0 my-2 my-md-0 mx-lg-3`}>Empezar</button>
             </li>
             <li className="nav-item">
-              <Link href="/" passHref>
-                <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">Iniciar sesión</span>
-              </Link>
+              <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">Iniciar sesión</span>
             </li>
           </ul>
         </div>
