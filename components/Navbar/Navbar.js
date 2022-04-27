@@ -62,7 +62,6 @@ const Navbar = () => {
               <button type="button" className={`nav-link ${styles.buttonStyleGet} px-4 px-lg-3 mx-0 my-2 my-md-0 mx-lg-3`}>Empezar</button>
             </li>
             <li className="nav-item">
-<<<<<<< HEAD
               {
                 userData.accessToken
                   ? <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`}>Hola, {userData.name}</span>
@@ -72,9 +71,6 @@ const Navbar = () => {
                     </Link>
                   )
               }
-=======
-              <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn">Iniciar sesión</span>
->>>>>>> 56afb40002630a5e008bb0d070799ac42507ca34
             </li>
           </ul>
         </div>
