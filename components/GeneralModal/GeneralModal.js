@@ -14,7 +14,7 @@ const GeneralModal = ({ children, id, className }) => {
 };
 
 GeneralModal.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.array.isRequired,
   id: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
