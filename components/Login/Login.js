@@ -17,7 +17,7 @@ const Login = () => {
     });
     const json = await resp.json();
     localStorage.setItem('accessToken', json.accessToken);
-    localStorage.setItem('name', json.name);
+    localStorage.setItem('user_name', json.name);
   };
 
   return (

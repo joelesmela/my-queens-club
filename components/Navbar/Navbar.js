@@ -66,9 +66,7 @@ const Navbar = () => {
                 userData.accessToken
                   ? <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`}>Hola, {userData.name}</span>
                   : (
-                    <Link href="/" passHref>
                       <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn" >Iniciar sesión</span>
-                    </Link>
                   )
               }
             </li>
