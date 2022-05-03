@@ -24,7 +24,7 @@ const NewQueen = () => {
       </div>
       <div className="mb-3">
         <label htmlFor="exampleInputPassword1" className="form-label">Imagen de Portada</label>
-        <input type="file" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('coverImage', { required: true })} />
+        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('coverImage', { required: true })} />
         {errors.exampleRequired && <span>Este campo es requerido</span>}      </div>
       <button type="submit" className="btn btn-primary">Crear Queen</button>
     </form>
