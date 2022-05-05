@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import NewQueen from '../../components/NewQueen/NewQueen';
+import NewGallery from '../../components/NewGallery/NewGallery';
 import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
 
 const Admin = () => {
@@ -17,6 +18,7 @@ const Admin = () => {
 
       <main className='mb-5'>
         <NewQueen />
+        <NewGallery />
       </main>
 
     </div>
