@@ -60,8 +60,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/" passHref>
-                <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`}>Únete al club</span>
+              <Link href="/join" passHref>
+                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Únete al club</span>
               </Link>
             </li>
             <li className="nav-item d-flex justify-content-end">
