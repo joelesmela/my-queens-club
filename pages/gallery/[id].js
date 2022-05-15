@@ -22,6 +22,7 @@ const Gallery = ({
 
       <header>
         <ModalSingIn idModal='singIn' />
+        <ModalSingIn idModal='singInBuy' isLogin />
         <div className='pt-5 pb-4'>
           <h6 className={`text-uppercase fw-bolder text-center ${styles.title}`}>{galleryName}</h6>
           <h6 className={`fw-bolder text-center mb-4 ${styles.subTitle}`}>Galería de fotos de {queenName}</h6>
@@ -50,7 +51,7 @@ const Gallery = ({
                   <p>Si ya tenes una suscripción a esta galería,
                   inicia sesión para poder visualizarla. </p>
                   <div className='my-4'>
-                    <button className={`btn ${styles.outlineButton} btn-outline-dark`}>Iniciar sesión</button>
+                    <button className={`btn ${styles.outlineButton} btn-outline-dark`} data-bs-toggle="modal" data-bs-target="#singInBuy">Iniciar sesión</button>
                   </div>
                 </div>
               </div>
