@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import styles from '../../styles/Forms.module.css';
 
 const NewQueen = () => {
   const {
@@ -16,17 +17,20 @@ const NewQueen = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="col-8" onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className="form-label">Nombre de Queen</label>
-        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('name', { required: true })} />
+        <label htmlFor="exampleInputEmail1" className={`form-label ${styles.title}`}>Nombre de Queen</label>
+        <input type="text" className={`form-control ${styles.placeholder}`} id="exampleInputEmail1" aria-describedby="emailHelp" {...register('name', { required: true })} />
         {errors.exampleRequired && <span>Este campo es requerido</span>}
       </div>
       <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className="form-label">Imagen de Portada</label>
-        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('coverImage', { required: true })} />
-        {errors.exampleRequired && <span>Este campo es requerido</span>}      </div>
-      <button type="submit" className="btn btn-primary">Crear Queen</button>
+        <label htmlFor="exampleInputPassword1" className={`form-label ${styles.title}`}>Imagen de Portada</label>
+        <input type="text" className={`form-control ${styles.placeholder}`} id="exampleInputEmail1" aria-describedby="emailHelp" {...register('coverImage', { required: true })} />
+        {errors.exampleRequired && <span>Este campo es requerido</span>}
+      </div>
+      <div className='text-end'>
+        <button type="submit" className={`btn ${styles.button}`}>Crear Queen</button>
+      </div>
     </form>
   );
 };

@@ -16,6 +16,12 @@ const Navbar = () => {
     });
   };
 
+  const logout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('user_name');
+    window.location.reload(true);
+  };
+
   useEffect(() => {
     getUserData();
   }, []);
@@ -55,7 +61,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link href="/" passHref>
-                <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`}>Únete al club</span>
+                <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Únete al club</span>
               </Link>
             </li>
             <li className="nav-item d-flex justify-content-end">
@@ -64,7 +70,15 @@ const Navbar = () => {
             <li className="nav-item">
               {
                 userData.accessToken
-                  ? <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`}>Hola, {userData.name}</span>
+                  ? (
+                    <div className="dropdown">
+                      <button className={`nav-link dropdown-toggle ${styles.buttonDropdown} px-4 px-lg-3 mx-0 my-2 my-md-0 mx-lg-3`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                      <ul className={`dropdown-menu ${styles.dropdown}`} aria-labelledby="dropdownMenuButton1">
+                        <li><a className={`nav-link ${styles.colorLink} px-0 px-lg-3`} href="#">Mi cuenta</a></li>
+                        <li><span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" onClick={logout}>Cerrar sesión</span></li>
+                      </ul>
+                    </div>
+                  )
                   : (
                       <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn" >Iniciar sesión</span>
                   )
