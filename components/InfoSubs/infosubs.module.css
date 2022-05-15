@@ -16,3 +16,9 @@
   height: 60px;
   background-color: var(--secondary-color);
 }
+.textColorPrimary{
+  color: var(--primary-color);
+}
+.textColorSecondary{
+  color: var(--secondary-color);
+}

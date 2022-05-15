@@ -19,6 +19,7 @@
   color: var(--secondary-color)
 }
 .button{
+  color: var(--secondary-color);
   background-color: var(--primary-color);
   border-radius: 5px;
   border-color: var(--primary-color);
@@ -58,4 +59,8 @@
 .checkBox:focus{
   box-shadow: transparent;
   border-color: transparent;
+}
+.text{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
 }

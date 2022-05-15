@@ -16,7 +16,7 @@ const Galleries = () => {
       </Head>
 
       <header>
-        <ModalSingIn idModal='singIn' />
+        <ModalSingIn idModal='singIn'/>
         <h5 className={`text-uppercase fw-bolder text-center py-5 ${styles.title}`}>Galerias</h5>
       </header>
 
