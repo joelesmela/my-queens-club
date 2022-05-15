@@ -1,9 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImage';
 
 const NewGallery = () => {
   const [queen, setQueen] = useState([]);
+  const [gallery, setGallery] = useState([]);
 
   const {
     register, handleSubmit, formState: { errors },
@@ -11,7 +13,10 @@ const NewGallery = () => {
   const onSubmit = async (data) => {
     await fetch('http://localhost:8000/galleries', {
       method: 'POST',
-      body: JSON.stringify({ ...data }),
+      body: JSON.stringify({
+        ...data,
+        photos: gallery,
+      }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -23,6 +28,11 @@ const NewGallery = () => {
     const json = await response.json();
     setQueen(json);
   };
+
+  const handleImages = (arrayImages) => {
+    setGallery(arrayImages);
+  };
+
   useEffect(() => {
     handleQueen();
   }, []);
@@ -34,7 +44,7 @@ const NewGallery = () => {
         <select className="form-select" aria-label="Default select example" {...register('idQueen', { required: true })}>
           <option selected>Seleccione una Queen</option>
           {
-            queen.map(x => <option key={x._id} value={x._id}>{x.name}</option>)
+            queen.length > 0 && queen.map(x => <option key={x._id} value={x._id}>{x.name}</option>)
           }
         </select>
       </div>
@@ -53,10 +63,7 @@ const NewGallery = () => {
         <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('price', { required: true })} />
         {errors.exampleRequired && <span>Este campo es requerido</span>}
       </div>
-      <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className="form-label">Fotos de la Galeria</label>
-        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('photos', { required: true })} />
-        {errors.exampleRequired && <span>Este campo es requerido</span>}      </div>
+      <CloudinaryUploadImage onSave={handleImages}/>
       <button type="submit" className="btn btn-primary">Crear Galeria</button>
     </form>
   );
