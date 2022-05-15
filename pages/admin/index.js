@@ -2,6 +2,7 @@ import Head from 'next/head';
 import NewQueen from '../../components/NewQueen/NewQueen';
 import NewGallery from '../../components/NewGallery/NewGallery';
 import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
+import styles from '../../styles/Home.module.css';
 
 const Admin = () => {
   return (
@@ -16,7 +17,7 @@ const Admin = () => {
         <ModalSingIn idModal='singIn'/>
       </header>
 
-      <main className='mb-5'>
+      <main className={`p-md-5 ${styles.bgHome} d-flex justify-content-center align-items-center flex-wrap`}>
         <NewQueen />
         <NewGallery />
       </main>
