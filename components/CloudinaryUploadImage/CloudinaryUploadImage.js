@@ -4,7 +4,7 @@ import Script from 'next/script';
 import PropTypes from 'prop-types';
 import styles from '../../styles/Forms.module.css';
 
-const CloudinaryUploadImage = ({ onSave, label }) => {
+const CloudinaryUploadImage = ({ onSave, label, multiple }) => {
   const [images, setImages] = useState([]);
   const [image, setImage] = useState('');
 
@@ -18,7 +18,7 @@ const CloudinaryUploadImage = ({ onSave, label }) => {
           'url',
         ],
         cropping: false,
-        multiple: true,
+        multiple,
         defaultSource: 'local',
         styles: {
           palette: {
@@ -76,6 +76,11 @@ const CloudinaryUploadImage = ({ onSave, label }) => {
 CloudinaryUploadImage.propTypes = {
   onSave: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
+  multiple: PropTypes.bool,
+};
+
+CloudinaryUploadImage.defaultProps = {
+  multiple: false,
 };
 
 export default CloudinaryUploadImage;

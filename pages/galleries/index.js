@@ -1,12 +1,25 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Footer from '../../components/Footer/Footer';
 import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
 import CardGallery from '../../components/CardGallery/CardGallery';
 
 import styles from '../../styles/Galleries.module.css';
-import data from '../../data/galleries.example.json';
 
 const Galleries = () => {
+  const [data, setData] = useState([]);
+
+  const handleGalleries = async () => {
+    const response = await fetch('http://localhost:8000/galleries');
+    const json = await response.json();
+
+    setData(json);
+  };
+
+  useEffect(() => {
+    handleGalleries();
+  }, []);
+
   return (
     <div className={styles.bgHome}>
       <Head>
@@ -23,7 +36,7 @@ const Galleries = () => {
       <main className='mb-5 container-fluid'>
         <section className='row gx-0'>
           {
-            data.map((info, index) => (
+            data?.map((info, index) => (
               <div key={index} className='col-12 col-md-4 col-lg-3'>
                 <CardGallery {...info} gallery />
               </div>
