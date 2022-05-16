@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useForm } from 'react-hook-form';
 import Footer from '../components/Footer/Footer';
 import ModalSingIn from '../components/ModalSingIn/ModalSingIn';
-
 import styles from '../styles/join.module.css';
 
 const Join = () => {

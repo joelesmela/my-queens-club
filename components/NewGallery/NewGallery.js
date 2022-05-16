@@ -1,10 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImage';
 import styles from '../../styles/Forms.module.css';
 
 const NewGallery = () => {
   const [queen, setQueen] = useState([]);
+  const [gallery, setGallery] = useState([]);
+  const [coverPhotoGallery, setCoverPhotoGallery] = useState('');
 
   const {
     register, handleSubmit, formState: { errors },
@@ -12,7 +15,11 @@ const NewGallery = () => {
   const onSubmit = async (data) => {
     await fetch('http://localhost:8000/galleries', {
       method: 'POST',
-      body: JSON.stringify({ ...data }),
+      body: JSON.stringify({
+        ...data,
+        photos: gallery,
+        coverPhotoGallery,
+      }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -24,6 +31,15 @@ const NewGallery = () => {
     const json = await response.json();
     setQueen(json);
   };
+
+  const handleGalleryImages = (arrayImages) => {
+    setGallery(arrayImages);
+  };
+
+  const handleCoverPhotoGallery = (arrayImages) => {
+    setCoverPhotoGallery(arrayImages);
+  };
+
   useEffect(() => {
     handleQueen();
   }, []);
@@ -35,7 +51,7 @@ const NewGallery = () => {
         <select className={`form-select ${styles.placeholder}`} aria-label="Default select example" {...register('idQueen', { required: true })}>
           <option selected>Seleccione una Queen</option>
           {
-            queen.map(x => <option key={x._id} value={x._id}>{x.name}</option>)
+            queen.length > 0 && queen.map(x => <option key={x._id} value={x._id}>{x.name}</option>)
           }
         </select>
       </div>
@@ -45,9 +61,10 @@ const NewGallery = () => {
         {errors.exampleRequired && <span className={`${styles.title}`}>Este campo es requerido</span>}
       </div>
       <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className={`form-label ${styles.title}`}>Foto de Portada</label>
-        <input type="text" className={`form-control ${styles.placeholder}`} id="exampleInputEmail1" aria-describedby="emailHelp" {...register('coverPhotoGallery', { required: true })} />
-        {errors.exampleRequired && <span className={`${styles.title}`}>Este campo es requerido</span>}
+        <div>
+          <label htmlFor="galeria" className={`form-label ${styles.title}`}>Foto de portada</label>
+        </div>
+        <CloudinaryUploadImage onSave={handleCoverPhotoGallery} label="Cargar foto portada" />
       </div>
       <div className="mb-3">
         <label htmlFor="exampleInputEmail1" className={`form-label ${styles.title}`}>Precio de la Galeria</label>
@@ -55,13 +72,12 @@ const NewGallery = () => {
         {errors.exampleRequired && <span className={`${styles.title}`}>Este campo es requerido</span>}
       </div>
       <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className={`form-label ${styles.title}`}>Fotos de la Galeria</label>
-        <input type="text" className={`form-control ${styles.placeholder}`} id="exampleInputEmail1" aria-describedby="emailHelp" {...register('photos', { required: true })} />
-        {errors.exampleRequired && <span>Este campo es requerido</span>}
+        <div>
+          <label htmlFor="galeria" className={`form-label ${styles.title}`}>Galeria</label>
+        </div>
+        <CloudinaryUploadImage onSave={handleGalleryImages} label="Cargar galeria"/>
       </div>
-      <div className="text-end">
-        <button type="submit" className={`btn ${styles.button}`}>Crear Galeria</button>
-      </div>
+      <button type="submit" className="btn btn-primary">Crear galeria</button>
     </form>
   );
 };
