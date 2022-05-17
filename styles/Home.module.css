@@ -1,3 +1,26 @@
 .bgHome{
   background-color: var(--bg-color);
 }
+.controlUser{
+  background: var(--bg-color);
+  height: 100vh;
+}
+.title{
+  color:var(--primary-color);
+  text-transform: uppercase;
+}
+.text{
+  color: var(--secondary-color);
+}
+.formLabel{
+  color: var(--secondary-color);
+}
+.formPlaceholder{
+  background: var(--bg-color);
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.formPlaceholder:focus{
+  background: var(--bg-color);
+  border-bottom: 2px solid var(--primary-color);
+}
