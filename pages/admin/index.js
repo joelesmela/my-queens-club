@@ -3,6 +3,7 @@ import NewQueen from '../../components/NewQueen/NewQueen';
 import NewGallery from '../../components/NewGallery/NewGallery';
 import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
 import styles from '../../styles/Home.module.css';
+import UserViewer from '../../components/UsersViewer/UserViewer';
 
 const Admin = () => {
   return (
@@ -20,6 +21,7 @@ const Admin = () => {
       <main className={`p-md-5 ${styles.bgHome} d-flex justify-content-center align-items-center flex-wrap`}>
         <NewQueen />
         <NewGallery />
+        <UserViewer />
       </main>
 
     </div>

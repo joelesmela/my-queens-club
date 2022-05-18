@@ -11,7 +11,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      await fetch('http://localhost:8000/user', {
+      const resp = await fetch('http://localhost:8000/user', {
         method: 'POST',
         body: JSON.stringify({
           ...data,
@@ -22,7 +22,9 @@ const Register = () => {
         },
       });
 
-      router.push('/login');
+      if (resp.status === 200) {
+        router.push('/login');
+      }
     } catch (error) {
       console.log(error);
     }
