@@ -6,9 +6,9 @@ const User = () => {
     <div className={ styles.controlUser }>
       <div className="text-center py-5">
         <h5 className={ styles.title }>Editar cuenta</h5>
-        <span className={ styles.text }>Bienvenido Patricio. En esta sección verás toda la información detallada de tú cuenta.</span>
+        <span className={` text-normal ${styles.text} `}>Bienvenido Patricio. En esta sección verás toda la información detallada de tú cuenta.</span>
       </div>
-      <section className="d-flex"> 
+      <section className="d-flex">
         <div className="border-end">
           <div className="d-flex justify-content-center flex-wrap">
             <div className="mt-3 d-flex justify-content-between">
@@ -39,7 +39,7 @@ const User = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default User;
