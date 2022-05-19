@@ -39,7 +39,7 @@ const CloudinaryUploadImage = ({ onSave, label, multiple }) => {
         },
       },
       (error, result) => {
-        setImage(result.info.url);
+        setImage(result?.info?.url);
       },
     );
 

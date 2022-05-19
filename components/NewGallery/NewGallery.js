@@ -18,7 +18,7 @@ const NewGallery = () => {
       body: JSON.stringify({
         ...data,
         photos: gallery,
-        coverPhotoGallery,
+        coverPhotoGallery: coverPhotoGallery[0],
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

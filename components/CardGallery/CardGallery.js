@@ -16,10 +16,11 @@ const CardGallery = ({
     <div className='p-1'>
       <div className={styles.cardGallery} onClick={handleClick}>
         <div className='position-relative'>
-          <Image src={coverPhotoGallery[0]} alt="cover foto gallery" height={1920} width={1200} layout="responsive" quality={100} priority />
+          <Image src={coverPhotoGallery} alt="cover foto gallery" height={1920}
+          width={1200} layout="responsive" quality={100} priority />
           <div className='text-white px-2 py-1 bg-dark bg-opacity-75 position-absolute bottom-0 end-0 d-flex'>
             <i className="bi bi-camera me-1" />
-            <div className={styles.imageQuantity}>{photos.lenght}</div>
+            <div className={styles.imageQuantity}>{photos?.lenght}</div>
           </div>
         </div>
         <div className='px-3'>
@@ -55,12 +56,12 @@ const CardGallery = ({
 };
 
 CardGallery.propTypes = {
-  coverPhotoGallery: PropTypes.array.isRequired,
+  _id: PropTypes.string.isRequired,
+  coverPhotoGallery: PropTypes.string,
   nameQueen: PropTypes.string.isRequired,
   galleryName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   gallery: PropTypes.bool,
-  _id: PropTypes.string.isRequired,
   photos: PropTypes.array.isRequired,
 };
 
