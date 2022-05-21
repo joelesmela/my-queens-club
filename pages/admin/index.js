@@ -4,6 +4,7 @@ import NewQueen from '../../components/NewQueen/NewQueen';
 import NewGallery from '../../components/NewGallery/NewGallery';
 import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
 import styles from '../../styles/Home.module.css';
+import CarouselPhoto from '../../components/CarouselPhoto/CarouselPhoto';
 
 const Admin = () => {
   const [queen, setQueen] = useState(false);
@@ -21,6 +22,7 @@ const Admin = () => {
 
       <main className={`p-md-5 ${styles.bgHome} d-flex justify-content-center align-items-center flex-wrap`}>
         <NewQueen setQueen={setQueen} />
+        <CarouselPhoto />
         <NewGallery queenSelect={queen} />
       </main>
 
