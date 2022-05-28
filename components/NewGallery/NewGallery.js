@@ -1,11 +1,12 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { Image } from 'cloudinary-react';
 import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImage';
 import styles from '../../styles/Forms.module.css';
 
-const NewGallery = () => {
+const NewGallery = ({ queenSelect }) => {
   const [queen, setQueen] = useState([]);
   const [gallery, setGallery] = useState([]);
   const [coverPhotoGallery, setCoverPhotoGallery] = useState([]);
@@ -43,7 +44,7 @@ const NewGallery = () => {
 
   useEffect(() => {
     handleQueen();
-  }, []);
+  }, [queenSelect]);
 
   return (
     <form className="col-8" onSubmit={handleSubmit(onSubmit)}>
@@ -56,7 +57,7 @@ const NewGallery = () => {
         </select>
       </div>
       <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className={`form-label ${styles.title}`}>Nombre de la Galeria</label>
+        <label htmlFor="exampleInputEmail1" className={`form-label ${styles.title}`}>Nombre de la Galería</label>
         <input type="text" className={`form-control ${styles.placeholder}`} id="exampleInputEmail1" aria-describedby="emailHelp" {...register('galleryName', { required: true })} />
         {errors.exampleRequired && <span className={`${styles.title}`}>Este campo es requerido</span>}
       </div>
@@ -77,7 +78,7 @@ const NewGallery = () => {
       </div>
       <div className="mb-3">
         <div>
-          <label htmlFor="galeria" className={`form-label ${styles.title}`}>Galeria</label>
+          <label htmlFor="galeria" className={`form-label ${styles.title}`}>Galería</label>
         </div>
         {
           gallery.length > 0
@@ -96,8 +97,16 @@ const NewGallery = () => {
       <div className="text-end">
         <button type="submit" className={`btn ${styles.button}`}>Crear Galeria</button>
       </div>
+<<<<<<< HEAD
+=======
+      <button type="submit" className="btn btn-primary">Crear galería</button>
+>>>>>>> de78405201585b22ba33b5eb0711d423a51cbddc
     </form>
   );
+};
+
+NewGallery.propTypes = {
+  queenSelect: PropTypes.bool.isRequired,
 };
 
 export default NewGallery;
