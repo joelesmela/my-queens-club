@@ -6,6 +6,7 @@ import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImag
 import styles from '../../styles/Forms.module.css';
 
 const NewGallery = ({ queenSelect }) => {
+  const urlbase = process.env.REACT_APP_URL_BASE;
   const [queen, setQueen] = useState([]);
   const [gallery, setGallery] = useState([]);
   const [coverPhotoGallery, setCoverPhotoGallery] = useState('');
@@ -14,7 +15,7 @@ const NewGallery = ({ queenSelect }) => {
     register, handleSubmit, formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    await fetch('http://localhost:8000/galleries', {
+    await fetch(`${urlbase}/galleries`, {
       method: 'POST',
       body: JSON.stringify({
         ...data,
@@ -28,7 +29,7 @@ const NewGallery = ({ queenSelect }) => {
   };
 
   const handleQueen = async () => {
-    const response = await fetch('http://localhost:8000/queen');
+    const response = await fetch(`${urlbase}/queen`);
     const json = await response.json();
     setQueen(json);
   };

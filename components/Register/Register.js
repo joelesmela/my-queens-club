@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import styles from './register.module.css';
 
 const Register = () => {
+  const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
   const router = useRouter();
   const {
     register, handleSubmit, formState: { errors },
@@ -11,7 +12,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      await fetch('http://localhost:8000/user', {
+      await fetch(`${urlbase}/user`, {
         method: 'POST',
         body: JSON.stringify({
           ...data,
