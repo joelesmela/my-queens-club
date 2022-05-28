@@ -10,4 +10,5 @@ const clientAxios = axios.create({
     accessToken: token,
   },
 });
+
 export default clientAxios;
