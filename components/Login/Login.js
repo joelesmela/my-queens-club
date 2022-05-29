@@ -17,7 +17,6 @@ const Login = () => {
       },
     });
     const json = await resp.json();
-    console.log(json);
     if (json.status !== 400) {
       localStorage.setItem('accessToken', json.accessToken);
       localStorage.setItem('user_name', json.name);
@@ -32,13 +31,13 @@ const Login = () => {
         <div className="input-group mb-3">
           <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
           <input type="text" className={`form-control ${styles.placeholder}`} placeholder="Nombre de usuario / Correo electrónico *" aria-label="Email" {...register('user', { required: true })}/>
-          {errors.email && <p className={`${styles.text}`}>Este campo es requerido</p>}
         </div>
+          {errors.user && <p className={`mb-3 ${styles.text}`}>* Este campo es requerido</p>}
         <div className="input-group mb-3">
           <span className={`input-group-text ${styles.icon}`}><i className="bi bi-key"></i></span>
           <input type="password" className={`form-control ${styles.placeholder}`} placeholder="Contraseña *" aria-label="Password" {...register('password', { required: true })}/>
         </div>
-          {errors.password && <p className={`${styles.text}`}>* Este campo es requerido</p>}
+          {errors.password && <p className={`mb-3 ${styles.text}`}>* Este campo es requerido</p>}
           {error.mensaje && <p className={`${styles.text}`}>* Los datos son incorrectos</p>}
         <div className='d-flex justify-content-between'>
           <div className="mb-3 pt-2 form-check">
