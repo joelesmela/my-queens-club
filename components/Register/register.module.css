@@ -49,3 +49,13 @@
   border-color: var(--primary-color);
   color: var(--primary-color)
 }
+.button:focus{
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border-color: var(--primary-color);
+  color: var(--primary-color)
+}
+.text{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
