@@ -47,3 +47,11 @@
   box-shadow: none;
   color: var(--secondary-color);
 }
+
+.icon{
+  color: var(--primary-color);
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
