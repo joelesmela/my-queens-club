@@ -30,7 +30,8 @@
 }
 
 .buttonStyleGet:focus{
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .buttonCollapse{
@@ -40,4 +41,28 @@
 
 .buttonCollIcon{
   color: var(--secondary-color);
+}
+
+.buttonDropdown{
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.buttonDropdown:hover{
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.buttonDropdown:focus{
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+}
+.dropdown{
+  border: 1.5px solid var(--primary-color);
+  background-color: var(--bg-color);
 }

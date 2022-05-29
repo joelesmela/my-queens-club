@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './footer.module.css';
+import classes from '../../styles/Forms.module.css';
 import logo from '../../public/images/logo1.png';
 
 const Footer = () => {
@@ -15,8 +16,8 @@ const Footer = () => {
               <p className={`mt-2 ${styles.text}`}>Reciba mensualmente todas las novedades de nuestras modelos directamente en su bandeja de entrada. También obtendrás ofertas exclusivas sólo disponibles a través de nuestros boletines.</p>
               <form>
                 <div className="input-group">
-                  <input type="email" className={`form-control ${styles.placeholder}`} placeholder="Email" aria-label="Email" required />
-                  <button type="submit" className={`input-group-text ${styles.button}`}>Suscríbete</button>
+                  <input type="email" className={`form-control ${classes.placeholder}`} placeholder="Email" aria-label="Email" required />
+                  <button type="submit" className={`input-group-text ${classes.button}`}>Suscríbete</button>
                 </div>
               </form>
             </div>
