@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import styles from './register.module.css';
+import clientAxios from '../../config/clientAxios';
 
 const Register = () => {
   const router = useRouter();
@@ -10,24 +11,14 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    try {
-      const resp = await fetch('http://localhost:8000/user', {
-        method: 'POST',
-        body: JSON.stringify({
-          ...data,
-          role: 'client',
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
+    clientAxios.post('/user', data)
+      .then(response => {
+        if (response.status === 200) {
+          router.push('/login');
+        } else {
+          console.log('...');
+        }
       });
-
-      if (resp.status === 200) {
-        router.push('/login');
-      }
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   return (
