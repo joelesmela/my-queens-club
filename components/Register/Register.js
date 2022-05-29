@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import styles from './register.module.css';
 
 const Register = () => {
+  const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
   const [isValid, setIsValid] = useState(true);
   const [validEmail, setValidEmail] = useState({});
   const [validUserName, setValidUserName] = useState({});
@@ -17,7 +18,7 @@ const Register = () => {
       setIsValid(false);
       return;
     }
-    const resp = await fetch('http://localhost:8000/user', {
+    const resp = await fetch(`${urlbase}/user`, {
       method: 'POST',
       body: JSON.stringify({
         ...data,
