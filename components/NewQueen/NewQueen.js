@@ -5,11 +5,12 @@ import Swal from 'sweetalert2';
 import styles from '../../styles/Forms.module.css';
 
 const NewQueen = ({ setQueen }) => {
+  const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
   const {
     register, handleSubmit, formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    const response = await fetch('http://localhost:8000/queen', {
+    const response = await fetch(`${urlbase}/queen`, {
       method: 'POST',
       body: JSON.stringify({ ...data }),
       headers: {
