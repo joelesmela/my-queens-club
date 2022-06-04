@@ -2,9 +2,10 @@ import axios from 'axios';
 import { GetLocalStorage } from '../helper/GetLocalStorage';
 
 const token = GetLocalStorage('accessToken');
+const urlbase = process.env.REACT_APP_URL_BASE;
 
 const clientAxios = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: urlbase,
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
     accessToken: token,

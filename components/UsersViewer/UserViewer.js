@@ -3,7 +3,6 @@ import { React, useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import clientAxios from '../../config/clientAxios';
 import GeneralModal from '../GeneralModal/GeneralModal';
-import ModalSingIn from '../ModalSingIn/ModalSingIn';
 import styles from './userViewer.module.css';
 
 const UserViewer = () => {
@@ -84,13 +83,8 @@ const UserViewer = () => {
     if (cat === 'all') {
       setUsersAux(users);
     } else {
-      const itemsMap = [];
-      users.filter((user) => {
-        if (user.role.toLowerCase() === cat.toLowerCase()) {
-          itemsMap.push(user);
-          console.log(user);
-        }
-      });
+      const itemsMap = users.filter((user) => (user.role.toLowerCase() === cat.toLowerCase())
+      && user);
       setUsersAux(itemsMap);
     }
   };
@@ -99,14 +93,9 @@ const UserViewer = () => {
     if (e.length === 0) {
       setUsersAux(users);
     } else {
-      const itemsMap = [];
-      users.filter((user) => {
-        if ((user.email.toLowerCase() === e.toLowerCase())
-        || (user.userName.toLowerCase() === e.toLowerCase())) {
-          itemsMap.push(user);
-          console.log(user);
-        }
-      });
+      const itemsMap = users.filter(user => ((user.userName.toLowerCase() === e.toLowerCase())
+      || (user.email.toLowerCase() === e.toLowerCase())) && user);
+
       setUsersAux(itemsMap);
     }
   };
