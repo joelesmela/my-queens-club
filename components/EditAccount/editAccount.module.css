@@ -1,0 +1,19 @@
+.formLabel{
+    color: var(--secondary-color);
+  }
+  .formPlaceholder{
+    background: var(--bg-color);
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+  }
+  .formPlaceholder:focus{
+    background: var(--bg-color);
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+  }
+  .cardPassword{
+    background: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+  }
+
