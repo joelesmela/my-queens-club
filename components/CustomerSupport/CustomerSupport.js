@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import styles from './customerSupport.module.css';
 
-function CustomerSupport() {
+const CustomerSupport = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
@@ -14,17 +14,17 @@ function CustomerSupport() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="input-group mb-3">
               <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
-              <input type="text" placeholder="Nombre" {...register('firstName', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputName" aria-describedby="Ingresa tu nombre"/>
+              <input type="text" placeholder="Nombre" {...register('firstName', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputName" />
             </div>
               {errors.firstName?.type === 'required' && <p className={`${styles.error}`}>* El nombre es requerido</p>}
             <div className="input-group mb-3">
               <span className={`input-group-text ${styles.icon}`}><i className="bi bi-at"></i></span>
-              <input type="email" placeholder="Correo Electrónico" {...register('email', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputEmail" aria-describedby="Email"/>
+              <input type="email" placeholder="Correo Electrónico" {...register('email', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputEmail" />
             </div>
               {errors.email?.type === 'required' && <p className={`${styles.error}`}>* El email es requerido</p>}
             <div className="input-group mb-3">
               <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
-              <input type="text" placeholder="Asunto" {...register('asunto', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputAsunto" aria-describedby="Ingresa tu Instagram"/>
+              <input type="text" placeholder="Asunto" {...register('asunto', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputAsunto" />
             </div>
               {errors.asunto?.type === 'required' && <p className={`${styles.error}`}>* El asunto es requerido</p>}
             <div className="input-group mb-3">
@@ -40,6 +40,6 @@ function CustomerSupport() {
       </div>
     </div>
   );
-}
+};
 
 export default CustomerSupport;

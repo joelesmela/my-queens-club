@@ -13,6 +13,7 @@
   font-size: 15px;
   border-radius: 2px;
   padding: 8px 24px;
+  transition: .5s;
 }
 
 .buttonForm:hover{
@@ -21,17 +22,12 @@
   border: 2px solid var(--secondary-color);
 }
 
-.icon{
-  font-size: 22px;
-  color: var(--primary-color);
-}
-
 .text{
   color: var(--secondary-color)
 }
 
 .error{
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .inputStyle{
