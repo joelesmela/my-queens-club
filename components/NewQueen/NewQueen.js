@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import styles from '../../styles/Forms.module.css';
+import clientAxios from '../../config/clientAxios';
 
 const NewQueen = ({ setQueen }) => {
   const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
@@ -10,35 +11,31 @@ const NewQueen = ({ setQueen }) => {
     register, handleSubmit, formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    const response = await fetch(`${urlbase}/queen`, {
-      method: 'POST',
-      body: JSON.stringify({ ...data }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
-    if (response.status === 200) {
-      setQueen(true);
-      Swal.fire({
-        icon: 'success',
-        iconColor: '#D44F80',
-        title: 'Queen creada con éxito',
-        color: '#FFF8D2',
-        background: '#0A1326',
-        confirmButtonText: 'Cerrar',
-        confirmButtonColor: '#D44F80',
+    clientAxios.post('/queen', data)
+      .then(response => {
+        if (response.status === 200) {
+          setQueen(true);
+          Swal.fire({
+            icon: 'success',
+            iconColor: '#D44F80',
+            title: 'Queen creada con éxito',
+            color: '#FFF8D2',
+            background: '#0A1326',
+            confirmButtonText: 'Cerrar',
+            confirmButtonColor: '#D44F80',
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            iconColor: '#D44F80',
+            title: 'No se puede crear la Queen',
+            color: '#FFF8D2',
+            background: '#0A1326',
+            confirmButtonText: 'Cerrar',
+            confirmButtonColor: '#D44F80',
+          });
+        }
       });
-    } else {
-      Swal.fire({
-        icon: 'error',
-        iconColor: '#D44F80',
-        title: 'No se puede crear la Queen',
-        color: '#FFF8D2',
-        background: '#0A1326',
-        confirmButtonText: 'Cerrar',
-        confirmButtonColor: '#D44F80',
-      });
-    }
   };
 
   return (

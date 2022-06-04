@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImage';
 import styles from '../../styles/Forms.module.css';
+import clientAxios from '../../config/clientAxios';
 
 const NewGallery = ({ queenSelect }) => {
-  const urlbase = process.env.REACT_APP_URL_BASE;
   const [queen, setQueen] = useState([]);
   const [gallery, setGallery] = useState([]);
   const [coverPhotoGallery, setCoverPhotoGallery] = useState('');
@@ -15,23 +15,13 @@ const NewGallery = ({ queenSelect }) => {
     register, handleSubmit, formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    await fetch(`${urlbase}/galleries`, {
-      method: 'POST',
-      body: JSON.stringify({
-        ...data,
-        photos: gallery,
-        coverPhotoGallery,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
+    clientAxios.post('/galleries', data)
+      .then(response => console.log(response.data));
   };
 
   const handleQueen = async () => {
-    const response = await fetch(`${urlbase}/queen`);
-    const json = await response.json();
-    setQueen(json);
+    clientAxios.post('/queen')
+      .then(response => setQueen(response.data));
   };
 
   const handleGalleryImages = (arrayImages) => {
