@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './infosection.module.css';
 import ModalSingIn from '../ModalSingIn/ModalSingIn';
 import GeneralModal from '../GeneralModal/GeneralModal';
+import Payment from '../Payment/Payment';
 
 import data from '../../data/faq.json';
 import CustomerSupport from '../CustomerSupport/CustomerSupport';
@@ -17,11 +18,11 @@ const InfoSection = ({ className }) => {
             <CustomerSupport />
           </GeneralModal>
         </div>
-        <div className={`col-sm-12 col-md-6 col-lg-3 pb-lg-0 pb-5 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
+        <div data-bs-toggle="modal" data-bs-target='#paymodal' className={`col-sm-12 col-md-6 col-lg-3 pb-lg-0 pb-5 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
           <i className={`bi bi-credit-card-2-back fs-1 ${styles.iconColor}`}></i>
           <span>MEDIOS DE PAGO</span>
         </div>
-        <div data-bs-toggle="modal" data-bs-target='#faqmodal' className={`col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
+        <div data-bs-toggle="modal" data-bs-target='#faqmodal' className={`col-sm-12 col-md-6 col-lg-3 pb-lg-0 pb-5 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
           <i className={`bi bi-question-circle fs-1 ${styles.iconColor}`}></i>
           <span>PREGUNTAS FRECUENTES</span>
         </div>
@@ -36,7 +37,6 @@ const InfoSection = ({ className }) => {
 
       <GeneralModal id='faqmodal'>
         <h3 className={`mb-4 ${styles.textColorSecondary}`}>Preguntas frecuentes</h3>
-
         {
           data.map((text, i) => (
             <div key={i} className="mt-2">
@@ -46,6 +46,11 @@ const InfoSection = ({ className }) => {
           ))
         }
       </GeneralModal>
+
+      <GeneralModal id="paymodal">
+        <Payment />
+      </GeneralModal>
+
     </div>
   );
 };

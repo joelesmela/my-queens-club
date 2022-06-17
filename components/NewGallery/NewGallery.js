@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Image } from 'cloudinary-react';
 import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImage';
 import styles from '../../styles/Forms.module.css';
+import clientAxios from '../../config/clientAxios';
 
 const NewGallery = ({ queenSelect }) => {
   const [queen, setQueen] = useState([]);
@@ -14,24 +15,13 @@ const NewGallery = ({ queenSelect }) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
-    await fetch('http://localhost:8000/galleries', {
-      method: 'POST',
-      body: JSON.stringify({
-        ...data,
-        photos: gallery,
-        coverPhotoGallery: coverPhotoGallery[0],
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
+    clientAxios.post('/galleries', data)
+      .then(response => console.log(response.data));
   };
 
   const handleQueen = async () => {
-    const response = await fetch('http://localhost:8000/queen');
-    const json = await response.json();
-
-    setQueen(json);
+    clientAxios.post('/queen')
+      .then(response => setQueen(response.data));
   };
 
   const handleGalleryImages = (arrayImages) => {
@@ -97,10 +87,7 @@ const NewGallery = ({ queenSelect }) => {
       <div className="text-end">
         <button type="submit" className={`btn ${styles.button}`}>Crear Galeria</button>
       </div>
-<<<<<<< HEAD
-=======
       <button type="submit" className="btn btn-primary">Crear galería</button>
->>>>>>> de78405201585b22ba33b5eb0711d423a51cbddc
     </form>
   );
 };
