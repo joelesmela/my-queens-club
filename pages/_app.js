@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => {
   const [isScreenShoot, setIsScreenShoot] = useState(false);
 
   const handleKeyDown = (e) => {
-    console.log(e);
+    // console.log(e);
     if (e.code === 'ShiftLeft') {
       setIsScreenShoot(true);
     }

@@ -1,36 +1,67 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
+import emailjs from '@emailjs/browser';
 import styles from './customerSupport.module.css';
 
-function CustomerSupport() {
+const CustomerSupport = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+
+  const onSubmit = data => {
+    emailjs.send('service_tr0yapg', 'template_j5vmy83', data, 'GVmcDc7Bz93KTDHhQ')
+      .then((result) => {
+        if (result.text === 'OK') {
+          Swal.fire({
+            icon: 'success',
+            iconColor: '#D44F80',
+            title: 'Consulta enviada!',
+            color: '#FFF8D2',
+            background: '#0A1326',
+            confirmButtonText: 'Cerrar',
+            confirmButtonColor: '#D44F80',
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            iconColor: '#D44F80',
+            title: 'Ha ocurrido un error!',
+            color: '#FFF8D2',
+            background: '#0A1326',
+            confirmButtonText: 'Cerrar',
+            confirmButtonColor: '#D44F80',
+          });
+        }
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   return (
     <div className={`container-fluid py-3 ${styles.bgHome}`}>
       <div className='row'>
         <div className='col-sm-12 col-md-12 col-lg-12'>
+        <h3 className="py-3">Atención al Cliente</h3>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-3">
-              <label htmlFor="inputName" className={`form-label ${styles.text}`}>Nombre</label>
-              <input type="text" {...register('firstName', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputName" aria-describedby="Ingresa tu nombre"/>
-              {errors.firstName?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El nombre es requerido</span>}
+            <div className="input-group mb-3">
+              <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
+              <input type="text" placeholder="Nombre" name='firstName' {...register('firstName', { required: true })} className={`form-control ${styles.inputStyle}`} id="firstName" />
             </div>
-            <div className="mb-3">
-              <label htmlFor="inputEmail" className={`form-label ${styles.text}`}>Email</label>
-              <input type="email" {...register('email', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputEmail" aria-describedby="Email"/>
-              {errors.email?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El email es requerido</span>}
+              {errors.firstName?.type === 'required' && <p className={`${styles.error}`}>* El nombre es requerido</p>}
+            <div className="input-group mb-3">
+              <span className={`input-group-text ${styles.icon}`}><i className="bi bi-at"></i></span>
+              <input type="email" placeholder="Correo Electrónico" name='email' {...register('email', { required: true })} className={`form-control ${styles.inputStyle}`} id="email" />
             </div>
-            <div className="mb-3">
-              <label htmlFor="inputAsunto" className={`form-label ${styles.text}`}>Asunto</label>
-              <input type="text" {...register('asunto', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputAsunto" aria-describedby="Ingresa tu Instagram"/>
-              {errors.asunto?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El asunto es requerido</span>}
+              {errors.email?.type === 'required' && <p className={`${styles.error}`}>* El email es requerido</p>}
+            <div className="input-group mb-3">
+              <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
+              <input type="text" placeholder="Asunto" name='affair' {...register('affair', { required: true })} className={`form-control ${styles.inputStyle}`} id="affair" />
             </div>
-            <div className="mb-3">
-            <label htmlFor="inputMessage" className={`form-label ${styles.text}`}>Mensaje</label>
-              <textarea className={`form-control ${styles.inputStyle}`} {...register('message', { required: true })} id="inputMessage" rows="3"></textarea>
-              {errors.message && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El mensaje es requerido</span>}
+              {errors.affair?.type === 'required' && <p className={`${styles.error}`}>* El asunto es requerido</p>}
+            <div className="input-group mb-3">
+              <span className={`input-group-text ${styles.icon}`}><i className="bi bi-envelope align-items-start"></i></span>
+              <textarea placeholder="Ingrese su mensaje" name='message' className={`form-control ${styles.inputStyle}`} {...register('message', { required: true })} id="message" rows="3"></textarea>
             </div>
+              {errors.message && <p className={`${styles.error}`}>* El mensaje es requerido</p>}
             <div className='d-flex justify-content-end mb-3'>
               <button type="submit" className={styles.buttonForm}>Enviar</button>
             </div>
@@ -39,6 +70,6 @@ function CustomerSupport() {
       </div>
     </div>
   );
-}
+};
 
 export default CustomerSupport;
