@@ -62,7 +62,9 @@ const Gallery = ({ gallery }) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch('http://localhost:8000/galleries');
+  const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
+
+  const res = await fetch(`${urlbase}/galleries`);
   const posts = await res.json();
 
   const paths = posts.map((post) => ({
@@ -73,7 +75,9 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const res = await fetch(`http://localhost:8000/galleries/${params.id}`);
+  const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
+
+  const res = await fetch(`${urlbase}/galleries/${params.id}`);
   const gallery = await res.json();
 
   return {

@@ -7,10 +7,11 @@ import CardGallery from '../../components/CardGallery/CardGallery';
 import styles from '../../styles/Galleries.module.css';
 
 const Galleries = () => {
+  const urlbase = process.env.NEXT_PUBLIC_URL_BASE;
   const [data, setData] = useState([]);
 
   const handleGalleries = async () => {
-    const response = await fetch('http://localhost:8000/galleries');
+    const response = await fetch(`${urlbase}/galleries`);
     const json = await response.json();
 
     setData(json);
