@@ -1,34 +1,33 @@
 import React from 'react';
-import styles from '../../styles/Home.module.css';
-import classes from './editAccount.module.css';
+import styles from './editAccount.module.css';
 
 const EditAccount = () => {
   return (
-     <div className="container">
-      <forms className="d-flex align-items-center flex-column">
-        <div className="col-11 d-flex justify-content-between mb-4">
+     <div className="container w-100">
+      <forms className="row m-3">
+        <div className="col-12 d-flex justify-content-between mb-4">
           <div className="col-5">
-            <label className={`form-label ${classes.formLabel}`}>Nombre</label>
-            <input type="text" className={`form-control form-control-sm ${classes.formPlaceholder}`} id="nameUser" />
+            <label className={`form-label ${styles.formLabel}`}>Nombre</label>
+            <input type="text" className={`form-control form-control-sm ${styles.formPlaceholder}`} id="nameUser" />
           </div>
           <div className="col-5">
-            <label className={`form-label ${classes.formLabel}`}>Apellido</label>
-            <input type="text" className={`form-control form-control-sm ${classes.formPlaceholder}`} id="lastNameUser" />
+            <label className={`form-label ${styles.formLabel}`}>Apellido</label>
+            <input type="text" className={`form-control form-control-sm ${styles.formPlaceholder}`} id="lastNameUser" />
           </div>
         </div>
-        <div className="col-11 mb-4">
-          <label className={`form-label ${classes.formLabel}`}>Nombre visible</label>
-          <input type="text" className={`form-control form-control-sm ${classes.formPlaceholder}`} id="nameVisibleUser" aria-describedby="nameVisibleUser" />
-          <div id="nameVisibleUser" className={`form-text fst-italic ${classes.formLabel}`}>
+        <div className="col-12 mb-4">
+          <label className={`form-label ${styles.formLabel}`}>Nombre de Usuario</label>
+          <input type="text" className={`form-control form-control-sm ${styles.formPlaceholder}`} id="nameVisibleUser" aria-describedby="nameVisibleUser" />
+          <div id="nameVisibleUser" className={`form-text fst-italic ${styles.formLabel}`}>
             Así será como se mostrará tu nombre en la sección de tú cuenta y en las valoraciones.
           </div>
         </div>
-        <div className="col-11 mb-4">
-          <label className={`form-label ${classes.formLabel}`}>Correo electrónico</label>
-          <input type="email" className={`form-control form-control-sm ${classes.formPlaceholder}`} id="mailUser" />
+        <div className="col-12 mb-4">
+          <label className={`form-label ${styles.formLabel}`}>Correo electrónico</label>
+          <input type="email" className={`form-control form-control-sm ${styles.formPlaceholder}`} id="mailUser" />
         </div>
-        <div className="col-11 d-flex justify-content-center flex-column border p-3 m2 cardPassword">
-          <h5 className={ classes.text }>Cambio de contraseña</h5>
+        <div className="col-12 d-flex justify-content-center flex-column border p-3 m2 cardPassword">
+          <h5 className={ styles.formLabel }>Cambio de contraseña</h5>
           <div className="card-body">
             <div className="mb-4">
               <label className={`form-label ${styles.formLabel}`}>Contraseña actual</label>
@@ -48,7 +47,7 @@ const EditAccount = () => {
           </div>
         </div>
         <div className="w-100 me-5 text-end">
-          <input className={`btn ${classes.button}`} type="submit" value="Guardar cambios" />
+          <input className={`btn ${styles.button}`} type="submit" value="Guardar cambios" />
         </div>
       </forms>
      </div>
