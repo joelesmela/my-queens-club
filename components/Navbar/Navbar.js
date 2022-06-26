@@ -20,13 +20,12 @@ const Navbar = () => {
 
   const logout = () => {
     localStorage.clear();
-    setUserData({});
     router.push('/');
   };
 
   useEffect(() => {
     getUserData();
-  }, [userData]);
+  }, []);
 
   return (
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
