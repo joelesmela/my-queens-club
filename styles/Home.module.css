@@ -35,3 +35,12 @@
   border: 2px solid var(--primary-color);
   border-radius: 10px;
 }
+.column{
+  color: var(--secondary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+.column:hover{
+  color: var(--primary-color);
+  cursor: pointer;
+}

@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
+  const router = useRouter();
   const [userData, setUserData] = useState({});
 
   const getUserData = () => {
@@ -17,14 +19,14 @@ const Navbar = () => {
   };
 
   const logout = () => {
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('user_name');
-    window.location.reload(true);
+    localStorage.clear();
+    setUserData({});
+    router.push('/');
   };
 
   useEffect(() => {
     getUserData();
-  }, []);
+  }, [userData]);
 
   return (
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
@@ -74,13 +76,13 @@ const Navbar = () => {
                     <div className="dropdown">
                       <button className={`nav-link dropdown-toggle ${styles.buttonDropdown} px-4 px-lg-3 mx-0 my-2 my-md-0 mx-lg-3`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
                       <ul className={`dropdown-menu ${styles.dropdown}`} aria-labelledby="dropdownMenuButton1">
-                        <li><a className={`nav-link ${styles.colorLink} px-0 px-lg-3`} href="#">Mi cuenta</a></li>
-                        <li><span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" onClick={logout}>Cerrar sesión</span></li>
+                        <li><a className={`nav-link ${styles.colorLink} px-0 px-lg-3`} href="/user">Mi cuenta</a></li>
+                        <li><span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" onClick={logout}>Cerrar sesión</span></li>
                       </ul>
                     </div>
                   )
                   : (
-                      <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#singIn" >Iniciar sesión</span>
+                      <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" data-bs-toggle="modal" data-bs-target="#singIn" >Iniciar sesión</span>
                   )
               }
             </li>

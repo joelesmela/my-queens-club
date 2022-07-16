@@ -1,42 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from '../../styles/Home.module.css';
+import { GetLocalStorage } from '../../helper/GetLocalStorage';
+import EditAccount from '../../components/EditAccount/EditAccount';
 
 const User = () => {
+  const [user, setUser] = useState(1);
+  const router = useRouter();
+  const data = GetLocalStorage('user_name');
+  const logout = () => {
+    localStorage.clear();
+    router.push('/');
+  };
+
   return (
     <div className={ styles.controlUser }>
       <div className="text-center py-5">
         <h5 className={ styles.title }>Editar cuenta</h5>
-        <span className={` text-normal ${styles.text} `}>Bienvenido Patricio. En esta sección verás toda la información detallada de tú cuenta.</span>
+        <span className={` text-normal ${styles.text} `}>Bienvenido {data}. En esta sección verás toda la información detallada de tú cuenta.</span>
       </div>
-      <section className="d-flex">
-        <div className="border-end">
-          <div className="d-flex justify-content-center flex-wrap">
-            <div className="mt-3 d-flex justify-content-between">
-              <i className={`bi bi-person-circle ${styles.icoUser}`}></i>
-              <div className="p-4 d-flex flex-column">
-                <span className={` ${styles.text} text-uppercase `}>Usuario</span>
-                <span className={ styles.text }>coreoElectronico@gmail.com</span>
-                <a className={` ${styles.text} text-end `} href="#">Cerrar sesión</a>
+      <section className='row gx-0'>
+        <section className="d-flex col-12 col-md-4 col-lg-4">
+          <div className="border-end">
+            <div className="d-flex justify-content-center flex-wrap">
+              <div className="mt-3 d-flex align-items-center justify-content-between">
+                <i className={`bi bi-person-circle ${styles.icoUser}`}></i>
+                <div className="p-4 d-flex flex-column">
+                  <a className={` ${styles.column} text-end `} href="#" onClick={logout}>Cerrar sesión</a>
+                </div>
+              </div>
+              <div className="w-100">
+                <nav className="nav flex-column mt-5">
+                  <div className={`nav-link ${styles.column}`}>
+                    <span onClick={() => setUser(1)}>Editar cuenta</span>
+                  </div>
+                  <div className={`nav-link ${styles.column}`}>
+                    <span onClick={() => setUser(2)}>Mis pedidos</span>
+                  </div>
+                  <div className={`nav-link ${styles.column}`}>
+                    <span onClick={() => setUser(3)}>Método de pago</span>
+                  </div>
+                  <div className={`nav-link ${styles.column}`}>
+                    <span onClick={() => setUser(4)}>Suscripciones</span>
+                  </div>
+                </nav>
               </div>
             </div>
-            <div className="w-100">
-              <nav className="nav flex-column mt-5">
-                <a className={`nav-link ${styles.text}`} href="#">
-                  <span className={ styles.title }>Editar cuenta</span>
-                </a>
-                <a className={`nav-link ${styles.text}`} href="#">
-                  <span className={ styles.text }>Mis pedidos</span>
-                </a>
-                <a className={`nav-link ${styles.text}`} href="#">
-                  <span className={ styles.text }>Método de pago</span>
-                </a>
-                <a className={`nav-link ${styles.text}`} href="#">
-                  <span className={ styles.text }>Suscripciones</span>
-                </a>
-              </nav>
-            </div>
           </div>
-        </div>
+        </section>
+        <section className='col-12 col-md-8 col-lg-7'>
+          {user === 1 && <EditAccount />}
+          {user === 2 && <p className='text-white'>Hola Mundo 2</p>}
+          {user === 3 && <p className='text-white'>Hola Mundo 3</p>}
+          {user === 4 && <p className='text-white'>Hola Mundo 4</p>}
+        </section>
       </section>
     </div>
   );
