@@ -1,32 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useUser } from '../../context/userContext';
+
 import styles from './navbar.module.css';
 
 const Navbar = () => {
   const router = useRouter();
-  const [userData, setUserData] = useState({});
-
-  const getUserData = () => {
-    const accessToken = localStorage.getItem('accessToken');
-    const name = localStorage.getItem('user_name');
-
-    setUserData({
-      name,
-      accessToken,
-    });
-  };
+  const { userData, flagReload, setFlagReload } = useUser();
 
   const logout = () => {
     localStorage.clear();
-    setUserData({});
+    setFlagReload(!flagReload);
     router.push('/');
   };
-
-  useEffect(() => {
-    getUserData();
-  }, [userData]);
 
   return (
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
