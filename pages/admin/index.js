@@ -5,6 +5,7 @@ import NewGallery from '../../components/NewGallery/NewGallery';
 import ModalSingIn from '../../components/ModalSingIn/ModalSingIn';
 import styles from '../../styles/Home.module.css';
 import CarouselPhoto from '../../components/CarouselPhoto/CarouselPhoto';
+import UserViewer from '../../components/UsersViewer/UserViewer';
 
 const Admin = () => {
   const [queen, setQueen] = useState(false);
@@ -24,6 +25,7 @@ const Admin = () => {
         <NewQueen setQueen={setQueen} />
         <CarouselPhoto />
         <NewGallery queenSelect={queen} />
+        <UserViewer />
       </main>
 
     </div>

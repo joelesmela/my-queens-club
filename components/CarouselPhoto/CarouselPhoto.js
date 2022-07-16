@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import CloudinaryUploadImage from '../CloudinaryUploadImage/CloudinaryUploadImage';
 import styles from '../../styles/Forms.module.css';
+import clientAxios from '../../config/clientAxios';
 
 const CarouselPhoto = () => {
   const [queen, setQueen] = useState([]);
@@ -12,22 +13,12 @@ const CarouselPhoto = () => {
     register, handleSubmit,
   } = useForm();
   const onSubmit = async (data) => {
-    await fetch('http://localhost:8000/carousel', {
-      method: 'POST',
-      body: JSON.stringify({
-        ...data,
-        coverImage,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
+    await clientAxios.post(data);
   };
 
   const handleQueen = async () => {
-    const response = await fetch('http://localhost:8000/queen');
-    const json = await response.json();
-    setQueen(json);
+    const response = await clientAxios.get('/queen');
+    setQueen(response.data);
   };
 
   const handleCoverImage = (arrayImages) => {
