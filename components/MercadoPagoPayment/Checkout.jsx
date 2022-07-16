@@ -22,7 +22,7 @@ export default function Checkout() {
 
   return (
     <div>
-      <div className='cho-container' />
+      <div className='cho-container'/>
     </div>
   );
 }
