@@ -8,6 +8,7 @@ import styles from './userViewer.module.css';
 const UserViewer = () => {
   const [users, setUsers] = useState([]);
   const [usersAux, setUsersAux] = useState([]);
+  const [flag, setFlag] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const getUsers = async () => {
@@ -33,7 +34,7 @@ const UserViewer = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [flag]);
 
   const editUser = (id) => {
     alert(id);
@@ -54,6 +55,7 @@ const UserViewer = () => {
         clientAxios.delete(`/user/${id}`)
           .then((response) => {
             if (response.status !== 400) {
+              setFlag(!flag);
               Swal.fire({
                 icon: 'success',
                 iconColor: '#D44F80',

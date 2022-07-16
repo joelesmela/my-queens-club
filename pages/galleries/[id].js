@@ -8,6 +8,7 @@ import styles from '../../styles/Galleries.module.css';
 import data from '../../data/galleries.example.json';
 
 const Galleries = ({ gallery }) => {
+  alert(galery.galleryName)
   return (
     <div className={styles.bgHome}>
       <Head>
@@ -25,7 +26,7 @@ const Galleries = ({ gallery }) => {
         <section className='row gx-0'>
           {
             gallery.map((info, index) => (
-              <div key={index} className='col-12 col-md-4 col-lg-3'>
+              <div key={index} className='col-6 col-md-4 col-lg-3'>
                 <CardGallery {...info} gallery />
               </div>
             ))
