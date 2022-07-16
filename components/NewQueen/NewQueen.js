@@ -24,17 +24,18 @@ const NewQueen = ({ setQueen }) => {
             confirmButtonText: 'Cerrar',
             confirmButtonColor: '#D44F80',
           });
-        } else {
-          Swal.fire({
-            icon: 'error',
-            iconColor: '#D44F80',
-            title: 'No se puede crear la Queen',
-            color: '#FFF8D2',
-            background: '#0A1326',
-            confirmButtonText: 'Cerrar',
-            confirmButtonColor: '#D44F80',
-          });
         }
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: 'error',
+          iconColor: '#D44F80',
+          title: 'No se puede crear la Queen',
+          color: '#FFF8D2',
+          background: '#0A1326',
+          confirmButtonText: 'Cerrar',
+          confirmButtonColor: '#D44F80',
+        });
       });
   };
 

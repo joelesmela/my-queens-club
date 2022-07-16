@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Home.module.css';
-import { GetLocalStorage } from '../../helper/GetLocalStorage';
 import EditAccount from '../../components/EditAccount/EditAccount';
+import { useUser } from '../../context/userContext';
 
 const User = () => {
+  const { userData, flagReload, setFlagReload } = useUser();
   const [user, setUser] = useState(1);
   const router = useRouter();
-  const data = GetLocalStorage('user_name');
+
   const logout = () => {
     localStorage.clear();
+    setFlagReload(!flagReload);
     router.push('/');
   };
 
@@ -17,7 +19,7 @@ const User = () => {
     <div className={ styles.controlUser }>
       <div className="text-center py-5">
         <h5 className={ styles.title }>Editar cuenta</h5>
-        <span className={` text-normal ${styles.text} `}>Bienvenido {data}. En esta sección verás toda la información detallada de tú cuenta.</span>
+        <span className={` text-normal ${styles.text} `}>Bienvenido {userData.name}. En esta sección verás toda la información detallada de tú cuenta.</span>
       </div>
       <section className='row gx-0'>
         <section className="d-flex col-12 col-md-4 col-lg-4">
