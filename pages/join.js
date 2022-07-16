@@ -1,12 +1,41 @@
 import Head from 'next/head';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 import Footer from '../components/Footer/Footer';
 import ModalSingIn from '../components/ModalSingIn/ModalSingIn';
 import styles from '../styles/join.module.css';
 
 const Join = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    emailjs.send('service_tr0yapg', 'template_pd2aprw', data, 'GVmcDc7Bz93KTDHhQ')
+      .then((result) => {
+        if (result.text === 'OK') {
+          Swal.fire({
+            icon: 'success',
+            iconColor: '#D44F80',
+            title: 'Consulta enviada!',
+            color: '#FFF8D2',
+            background: '#0A1326',
+            confirmButtonText: 'Cerrar',
+            confirmButtonColor: '#D44F80',
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            iconColor: '#D44F80',
+            title: 'Ha ocurrido un error!',
+            color: '#FFF8D2',
+            background: '#0A1326',
+            confirmButtonText: 'Cerrar',
+            confirmButtonColor: '#D44F80',
+          });
+        }
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   return (
     <div className={styles.bgHome}>
@@ -23,8 +52,8 @@ const Join = () => {
 
       <main className='mb-5 container'>
         <div className='d-flex flex-column'>
-          <h2 className={`${styles.text}`}>DESEAS FORMAR PARTE DE NUESTRO STAFF?</h2>
-          <h3 className={`mt-3 ${styles.formTitle}`}>Requisitos</h3>
+          <h3 className={`${styles.text}`}>DESEAS FORMAR PARTE DE NUESTRO STAFF?</h3>
+          <h4 className={`mt-3 ${styles.formTitle}`}>Requisitos</h4>
           <div className='d-flex align-items-center'>
             <i className={`bi bi-check-lg ${styles.icon}`}></i>
             <span className={`fw-bold mx-1 ${styles.text}`}>Ser mayor de 18 años</span>
@@ -38,51 +67,56 @@ const Join = () => {
             <span className={`fw-bold mx-1 ${styles.text}`}>Compromiso</span>
           </div>
         </div>
-        <h3 className={`my-3 ${styles.formTitle}`}>Formulario de contacto</h3>
+        <h4 className={`my-3 ${styles.formTitle}`}>Formulario de contacto</h4>
         <section>
          <form onSubmit={handleSubmit(onSubmit)}>
           <div className='row'>
-            <div className='col-sm-12 col-md-12 col-lg-6 d-flex flex-column mb-3 justify-content-center'>
+            <div className='col-sm-12 col-md-12 col-lg-4 d-flex flex-column justify-content-center'>
 
-              <label htmlFor="inputName" className={`form-label ${styles.text}`}>Nombre</label>
+              <label htmlFor="inputName" className={`form-label ${styles.textInput}`}>Nombre</label>
               <input type="text" {...register('firstName', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputName" aria-describedby="Ingresa tu nombre"/>
               {errors.firstName?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El nombre es requerido</span>}
 
-              <label htmlFor="inputAge" className={`form-label ${styles.text}`}>Edad</label>
-              <input type="text" {...register('age', { min: 18 }, { required: true })} className={`form-control ${styles.inputStyle}`} id="inputAge" aria-describedby="Ingresa tu edad"/>
-              {errors.age?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> La edad es requerida</span>}
-              {errors.age?.type === 'min' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> Debes tener almenos 18 años</span>}
-
-              <label htmlFor="inputInstagram" className={`form-label ${styles.text}`}>Instagram</label>
+              <label htmlFor="inputInstagram" className={`form-label ${styles.textInput}`}>Instagram</label>
               <input type="text" {...register('instagram', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputInstagram" aria-describedby="Ingresa tu Instagram"/>
               {errors.instagram?.type === 'required' && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> Instagram es requerido</span>}
 
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-6 d-flex flex-column mb-3 justify-content-center'>
+            <div className='col-sm-12 col-md-12 col-lg-4 d-flex flex-column justify-content-center'>
 
-              <label htmlFor="lastName" className={`form-label ${styles.text}`}>Apellido</label>
+              <label htmlFor="lastName" className={`form-label ${styles.textInput}`}>Apellido</label>
               <input type="text" {...register('lastName', { required: true })} className={`form-control ${styles.inputStyle}`} id="lastName"/>
               {errors.lastName && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El apellido es requerido</span>}
 
-              <label htmlFor="inputHeight" className={`form-label ${styles.text}`}>Altura</label>
+              <label htmlFor="inputHeight" className={`form-label ${styles.textInput}`}>Altura</label>
               <input type="text" {...register('height', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputHeight"/>
               {errors.height && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> La altura es requerida</span>}
 
-              <label htmlFor="inputTelephone" className={`form-label ${styles.text}`}>Teléfono</label>
-              <input type="tel" {...register('telephone', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputTelephone"/>
-              {errors.lastName && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El telefono es requerido</span>}
+            </div>
+
+            <div className='col-sm-12 col-md-12 col-lg-4 d-flex flex-column justify-content-center'>
+
+              <label htmlFor="inputAge" className={`form-label ${styles.textInput}`}>Edad</label>
+                <input type="number" {...register('age', { min: 18, required: true })} className={`form-control ${styles.inputStyle}`} id="inputAge" aria-describedby="Ingresa tu edad"/>
+                {errors.age?.type === 'min' && <span className={`${styles.error}`}>* Debes tener almenos 18 años</span>}
+                {errors.age?.type === 'required' && <span className={`${styles.error}`}>* La edad es requerida</span>}
+
+              <label htmlFor="inputTelephone" className={`form-label ${styles.textInput}`}>Teléfono</label>
+                <input type="tel" {...register('telephone', { required: true })} className={`form-control ${styles.inputStyle}`} id="inputTelephone"/>
+                {errors.lastName && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El telefono es requerido</span>}
 
             </div>
+
             <div className='col-sm-12 col-md-12 col-lg-12 d-flex flex-column mb-3 justify-content-center'>
 
-              <label htmlFor="inputMessage" className={`form-label ${styles.text}`}>Mensaje</label>
+              <label htmlFor="inputMessage" className={`form-label ${styles.textInput}`}>Mensaje</label>
               <textarea className={`form-control ${styles.inputStyle}`} {...register('message', { required: true })} id="inputMessage" rows="3"></textarea>
               {errors.message && <span className={`${styles.error}`}><i className="bi bi-exclamation-triangle"></i> El mensaje es requerido</span>}
 
             </div>
           </div>
           <div className='d-flex justify-content-end mb-3'>
-            <button type="submit" className={styles.buttonForm}>Submit</button>
+            <button type="submit" className={styles.buttonForm}>Enviar</button>
           </div>
         </form>
         </section>

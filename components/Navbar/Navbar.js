@@ -47,7 +47,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/" passHref>
+              <Link href="/join" passHref>
                 <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Únete al club</span>
               </Link>
             </li>
