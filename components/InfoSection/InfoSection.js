@@ -14,9 +14,6 @@ const InfoSection = ({ className }) => {
         <div className={`col-sm-2 col-md-6 col-lg-3 pb-lg-0 pb-5 d-flex flex-column justify-content-center align-items-center ${styles.box}`} data-bs-toggle="modal" data-bs-target='#customerSupport'>
           <i className={`bi bi-chat-square-text fs-1 ${styles.iconColor}`}></i>
           <span>ATENCIÓN AL CIENTE</span>
-          <GeneralModal id='customerSupport'>
-            <CustomerSupport />
-          </GeneralModal>
         </div>
         <div data-bs-toggle="modal" data-bs-target='#paymodal' className={`col-sm-12 col-md-6 col-lg-3 pb-lg-0 pb-5 d-flex flex-column justify-content-center align-items-center ${styles.box}`}>
           <i className={`bi bi-credit-card-2-back fs-1 ${styles.iconColor}`}></i>
@@ -34,6 +31,10 @@ const InfoSection = ({ className }) => {
           <ModalSingIn isLogin idModal='login' activeLogin={1}/>
         </div>
       </div>
+
+      <GeneralModal id='customerSupport'>
+        <CustomerSupport />
+      </GeneralModal>
 
       <GeneralModal id='faqmodal'>
         <h3 className={`mb-4 ${styles.textColorSecondary}`}>Preguntas frecuentes</h3>
