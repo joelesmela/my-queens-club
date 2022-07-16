@@ -15,14 +15,14 @@ export default function Checkout() {
         render: {
           container: '.cho-container',
           label: 'Pay',
-        }
+        },
       });
     }
-  }, [mercadopago])
+  }, [mercadopago]);
 
   return (
     <div>
       <div className='cho-container' />
     </div>
-  )
-};
+  );
+}
