@@ -13,7 +13,7 @@ const CarouselPhoto = () => {
     register, handleSubmit,
   } = useForm();
   const onSubmit = async (data) => {
-    await clientAxios.post(data);
+    await clientAxios.post('/queen', data);
   };
 
   const handleQueen = async () => {
