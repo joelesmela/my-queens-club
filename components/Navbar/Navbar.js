@@ -62,7 +62,7 @@ const Navbar = () => {
                       <button className={`nav-link dropdown-toggle ${styles.buttonDropdown} px-4 px-lg-3 mx-0 my-2 my-md-0 mx-lg-3`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
                       <ul className={`dropdown-menu ${styles.dropdown}`} aria-labelledby="dropdownMenuButton1">
                         <li><Link className={`nav-link ${styles.colorLink} px-0 px-lg-3`} href="/user">Mi cuenta</Link></li>
-                        <li><Link className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" onClick={logout}>Cerrar sesión</Link></li>
+                        <li><span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" onClick={logout}>Cerrar sesión</span></li>
                       </ul>
                     </div>
                   )
