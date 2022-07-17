@@ -42,7 +42,7 @@ const CardGallery = ({
                       <p className={`text-secondary m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
                     </div>
                     <div className='col-6 d-flex justify-content-end align-items-center m-0'>
-                      <button className={`btn ${styles.button}`}>Suscribete</button>
+                      <button className={`btn ${styles.button}`}>Suscribete!</button>
                     </div>
                   </div>
                 </>
