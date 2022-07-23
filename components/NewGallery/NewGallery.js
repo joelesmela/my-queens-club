@@ -20,7 +20,7 @@ const NewGallery = ({ queenSelect }) => {
   };
 
   const handleQueen = async () => {
-    clientAxios.post('/queen')
+    clientAxios.get('/queen')
       .then(response => setQueen(response.data));
   };
 

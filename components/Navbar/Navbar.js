@@ -1,31 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useUser } from '../../context/userContext';
+
 import styles from './navbar.module.css';
 
 const Navbar = () => {
   const router = useRouter();
-  const [userData, setUserData] = useState({});
-
-  const getUserData = () => {
-    const accessToken = localStorage.getItem('accessToken');
-    const name = localStorage.getItem('user_name');
-
-    setUserData({
-      name,
-      accessToken,
-    });
-  };
+  const { userData, flagReload, setFlagReload } = useUser();
 
   const logout = () => {
     localStorage.clear();
+    setFlagReload(!flagReload);
     router.push('/');
   };
-
-  useEffect(() => {
-    getUserData();
-  }, []);
 
   return (
     <nav className={`navbar navbar-expand-lg ${styles.bgNav}`}>
@@ -59,7 +47,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/" passHref>
+              <Link href="/join" passHref>
                 <span className={`nav-link ${styles.colorLink} px-0 px-md-3`}>Únete al club</span>
               </Link>
             </li>
@@ -73,7 +61,7 @@ const Navbar = () => {
                     <div className="dropdown">
                       <button className={`nav-link dropdown-toggle ${styles.buttonDropdown} px-4 px-lg-3 mx-0 my-2 my-md-0 mx-lg-3`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
                       <ul className={`dropdown-menu ${styles.dropdown}`} aria-labelledby="dropdownMenuButton1">
-                        <li><span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} href="/user">Mi cuenta</span></li>
+                        <li><Link className={`nav-link ${styles.colorLink} px-0 px-lg-3`} href="/user">Mi cuenta</Link></li>
                         <li><span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" onClick={logout}>Cerrar sesión</span></li>
                       </ul>
                     </div>
