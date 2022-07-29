@@ -96,14 +96,13 @@
   border: 1px solid var(--secondary-color);
 }
 
-/* @media (max-width: 992px) {
+@media (max-width: 992px) {
   .buttonDropdown::after{
     transform: rotate(90deg);
   }
-} */
+}
 
 .dropdown{
-  width: 100%;
   border: 1.5px solid var(--primary-color);
   background-color: var(--bg-color);
 }

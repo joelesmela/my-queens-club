@@ -54,11 +54,11 @@ const Navbar = () => {
             <li className={`nav-item ${styles.navItem}`}>
               <button type="button" className={`nav-link ${styles.buttonStyleGet} px-4 px-lg-3 mb-3 mb-lg-0 me-0 me-lg-3`}>Empezar</button>
             </li>
-            <li className={`nav-item ${styles.navItem}`}>
+            <li className={`nav-item btn-group ${styles.navItem}`}>
               {
                 userData.accessToken
                   ? (
-                    <div className="dropdown">
+                    <div className="btn-group">
                       <button className={`nav-link dropdown-toggle ${styles.buttonDropdown} px-5 px-lg-3`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
                       <ul className={`dropdown-menu ${styles.dropdown}`} aria-labelledby="dropdownMenuButton1">
                         <li>
@@ -71,37 +71,6 @@ const Navbar = () => {
                         </li>
                       </ul>
                     </div>
-                    // <>
-                    //   <div className="btn-group dropstart">
-                    //     <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    //       Dropstart
-                    //     </button>
-                    //     <ul className="dropdown-menu">
-                    //     </ul>
-                    //   </div>
-
-                    //   <div className="btn-group">
-                    //     <div className="btn-group dropstart" role="group">
-                    //       <button type="button" className="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                    //         <span className="visually-hidden">Toggle Dropstart</span>
-                    //       </button>
-                    //       <ul className="dropdown-menu">
-                    //         <li></li>
-                    //       </ul>
-                    //     </div>
-                    //     <button type="button" className="btn btn-secondary">
-                    //       Split dropstart
-                    //     </button>
-                    //   </div>
-
-                    //   <div class="btn-group dropend">
-                    //     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    //       Dropright
-                    //     </button>
-                    //     <ul class="dropdown-menu">
-                    //     </ul>
-                    //   </div>
-                    // </>
                   )
                   : (
                       <span className={`nav-link ${styles.colorLink} px-0 px-lg-3`} aria-current="page" data-bs-toggle="modal" data-bs-target="#singIn" >Iniciar sesión</span>
