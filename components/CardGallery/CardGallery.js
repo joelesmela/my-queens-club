@@ -13,7 +13,7 @@ const CardGallery = ({
   };
 
   return (
-    <div className='p-1'>
+    <div className="m-1">
       <div className={styles.cardGallery} onClick={handleClick}>
         <div className='position-relative'>
           <Image src={src} alt={alt} height={1920} width={1200} layout="responsive" quality={100} priority />
@@ -22,28 +22,24 @@ const CardGallery = ({
             <div className={styles.imageQuantity}>{imageQuantity}</div>
           </div>
         </div>
-        <div className='px-3'>
+        <div className={`p-2 ${styles.cardBody}`}>
           {
             !gallery
               ? (
-                <>
-                  <p className={`col-6 pt-3 pb-2 m-0 fw-normal fs-6 ${styles.titleName}`}>{galleryName}</p>
-                  <p className={`text-secondary pt-1 pb-3 m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
-                </>
+                <div className="d-flex justify-content-evenly align-items-center px-md-4">
+                  <p className={`fw-normal ${styles.titleName}`}>{galleryName}</p>
+                  <p className={`text-secondary fw-light ${styles.titleName}`}>{title}</p>
+                </div>
               )
               : (
                 <>
-                  <div className="row">
-                    <p className={`col-6 pt-3 pb-2 m-0 fw-normal fs-6 ${styles.titleName}`}>{galleryName}</p>
-                    <p className={`col-6 pt-3 pb-2 m-0 fw-light text-end ${styles.priceGallery}`}>${price} / mes</p>
+                  <div className="d-flex justify-content-between align-items-center px-lg-4">
+                    <p className={`fw-normal ${styles.titleName}`}>{galleryName}</p>
+                    <p className={`fw-light text-end ${styles.priceGallery}`}>${price}</p>
                   </div>
-                  <div className='row pb-3 pt-2'>
-                    <div className='col-6'>
-                      <p className={`text-secondary m-0 fw-light fs-6 ${styles.titleName}`}>{title}</p>
-                    </div>
-                    <div className='col-6 d-flex justify-content-end align-items-center m-0'>
-                      <button className={`btn ${styles.button}`}>Suscribete</button>
-                    </div>
+                  <div className='d-flex justify-content-between align-items-center ps-lg-4'>
+                    <span className={`text-secondary fw-light ${styles.titleName}`}>{title}</span>
+                    <button className={`btn ${styles.button}`}>Suscribete</button>
                   </div>
                 </>
               )
