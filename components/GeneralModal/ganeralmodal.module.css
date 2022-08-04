@@ -2,3 +2,12 @@
   background-color: var(--bg-color);
   color: var(--secondary-color);
 }
+
+.title {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.close {
+  background-color: var(--secondary-color);
+}

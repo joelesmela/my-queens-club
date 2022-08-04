@@ -3,7 +3,6 @@ import styles from './payment.module.css';
 const Payment = () => {
   return (
     <div className='container'>
-      <h3 className="py-3">Medios de Pago</h3>
       <div className={`${styles.box}`}>
         <div className="row m-0">
           <div className='col-lg-6 col-md-6 col-12'>

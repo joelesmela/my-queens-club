@@ -37,10 +37,9 @@ const CustomerSupport = () => {
   };
 
   return (
-    <div className={`container-fluid py-3 ${styles.bgHome}`}>
+    <div className={`container-fluid ${styles.bgHome}`}>
       <div className='row'>
         <div className='col-sm-12 col-md-12 col-lg-12'>
-        <h3 className="py-3">Atención al Cliente</h3>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="input-group mb-3">
               <span className={`input-group-text ${styles.icon}`}><i className="bi bi-person"></i></span>
