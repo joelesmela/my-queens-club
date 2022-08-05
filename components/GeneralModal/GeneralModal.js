@@ -25,7 +25,7 @@ GeneralModal.propTypes = {
     PropTypes.object,
   ]),
   id: PropTypes.string.isRequired,
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 export default GeneralModal;
