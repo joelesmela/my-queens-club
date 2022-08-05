@@ -3,7 +3,6 @@ import styles from './infosection.module.css';
 import ModalSingIn from '../ModalSingIn/ModalSingIn';
 import GeneralModal from '../GeneralModal/GeneralModal';
 import Payment from '../Payment/Payment';
-
 import data from '../../data/faq.json';
 import CustomerSupport from '../CustomerSupport/CustomerSupport';
 
@@ -32,12 +31,11 @@ const InfoSection = ({ className }) => {
         </div>
       </div>
 
-      <GeneralModal id='customerSupport'>
+      <GeneralModal id='customerSupport' name="ATENCION AL CLIENTE">
         <CustomerSupport />
       </GeneralModal>
 
-      <GeneralModal id='faqmodal'>
-        <h3 className={`mb-4 ${styles.textColorSecondary}`}>Preguntas frecuentes</h3>
+      <GeneralModal id='faqmodal' name="PREGUNTAS FRECUENTES">
         {
           data.map((text, i) => (
             <div key={i} className="mt-2">
@@ -48,7 +46,7 @@ const InfoSection = ({ className }) => {
         }
       </GeneralModal>
 
-      <GeneralModal id="paymodal">
+      <GeneralModal id="paymodal" name="MEDIOS DE PAGO">
         <Payment />
       </GeneralModal>
 

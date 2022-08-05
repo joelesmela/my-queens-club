@@ -1,10 +1,19 @@
-.modal{
+.title {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.close {
+  background-color: var(--secondary-color);
+}
+
+.modal {
   width: 100vh;
   background-color: var(--bg-color);
   padding: 40px;
-  border-radius: 5px;
 }
-.tab-nav-link{
+
+.tab-nav-link {
   color: var(--secondary-color);
   background-color: transparent;
   border: 1px solid var(--primary-color);
@@ -12,6 +21,7 @@
   font-size: 1rem;
   border-radius: 0.25rem;
 }
+
 .active {
   border: 1px solid #000000;
   background-color: var(--primary-color);

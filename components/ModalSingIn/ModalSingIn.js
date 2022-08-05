@@ -23,9 +23,13 @@ const ModalSingIn = ({
 
   return (
     <>
-    <div className="modal fade" id={idModal} tabIndex="-1" aria-hidden="true">
+    <div className="modal fade" id={idModal} tabIndex="-1" aria-hidden="true" aria-labelledby="modalSingIn">
       <div className="modal-dialog modal-dialog-centered">
         <div className={`modal-content ${styles.modal}`}>
+          <div className="modal-header mb-3 pt-2">
+            <h5 className={`modal-title ${styles.title}`} id="modalSingIn">Ingrese sus datos</h5>
+            <button type="button" className={`btn-close ${styles.close}`} data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
           <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li className={`nav-item w-50 ${isRegister ? 'd-none' : 'd-block'} ${!isLogin ? 'pe-2 w-50' : 'w-100'}`} role="presentation">
               <button className={`w-100 ${activeTab === 1 && styles.active} ${styles['tab-nav-link']}`} id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="true" onClick={() => setActiveTab(1)}>Ingresar</button>
